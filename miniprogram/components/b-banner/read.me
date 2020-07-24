@@ -1,0 +1,24 @@
+
+//可以用lib的jq库
+
+//banner滚动条,里面只能放图片，  需要里面放页面需要自己使用原生组件
+//写入true/false  用 {{true}}写入
+
+
+<b-banner
+    id="banner"
+    imgs="{{imgs}}"         //[{img:'',href:''},...]    href为空不跳转页面
+
+    indicatorDots=""        //是否显示点     默认：true
+    indicatorColor=""       //指示点颜色     默认：rgba(0, 0, 0, .3)
+    indicatorActiveColor="" //当前选中的指示点颜色  默认：#000000
+    autoplay=""             //是否自动播放   默认  true
+    circular=""             //是否采用衔接滑动   默认  true
+    vertical=""             //滑动方向是否为纵向  默认 false
+    interval=""             //自动切换时间间隔   默认 5000
+    duration=""             //滑动动画时长       默认 500
+    previousMargin="20rpx"  //前边距  默认：0
+    nextMargin=""           //后边距  默认：0
+    style="width:100%;height: 400rpx; display: block;"
+></b-banner>
+

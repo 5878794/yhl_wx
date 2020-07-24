@@ -1,0 +1,20 @@
+
+
+
+<swiper
+        indicator-dots="{{indicatorDots}}"
+        indicator-color="{{indicatorColor}}"
+        indicator-active-color="{{indicatorActiveColor}}"
+        autoplay="{{autoplay}}"
+        circular="{{circular}}"
+        vertical="{{vertical}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        previous-margin="{{previousMargin}}"
+        next-margin="{{nextMargin}}">
+    <block wx:for="{{imgs}}" wx:key="img">
+        <swiper-item>
+            <view class="banner_list" style="background-image: url({{item.img}})" data-data="{{item}}" bindtap="onclick"></view>
+        </swiper-item>
+    </block>
+</swiper>

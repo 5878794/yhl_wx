@@ -1,0 +1,37 @@
+
+
+
+<view class="box_slt">
+    <view class="box_hcc body">
+        <block wx:if="{{name}}">
+            <view class="name">{{name}}</view>
+        </block>
+        <view class="input_body box_hlc boxflex1 {{disabledClass}}">
+
+
+
+
+
+
+<!--            判断是否有图标-->
+            <block wx:if="{{icon}}">
+                <image src="{{icon}}"></image>
+            </block>
+
+
+<!--            判断输入框类型-->
+<!--            省市区-->
+
+            <picker class="__input__ boxflex1" disabled="{{disabled}}" mode='region' header-text="请选择"   value="{{newValue}}" custom-item="{{customItem}}"  rule="{{rule}}" bindchange="onSelect">
+                <view class="show_text diandian">{{showText}}</view>
+            </picker>
+
+
+
+
+
+
+        </view>
+    </view>
+<!--    <view class="err">{{err}}</view>-->
+</view>

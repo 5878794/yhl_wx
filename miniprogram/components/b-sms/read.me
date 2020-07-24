@@ -1,0 +1,27 @@
+
+//可以用lib的jq库
+//获取短信验证码输入框
+
+
+
+<b-sms
+    class="b_input"
+    icon="../../images/5@1x.png"
+    placeholder="电话号码"
+    name="电话"
+    id="name"
+    value=""
+    rule="must"
+    err="请输入用户名"
+
+    btnText=''          //按钮文字，  默认：发送短信
+    btnSendText=''      //按钮发送短信后，文字模版  {x}变量，会被替换  默认：剩{x}秒
+    btnStyle=''         //按钮发送短信前样式   默认：color:#333;  需要传入按钮宽度否则按钮文字变化会跳动
+    sendBtnStyle=''     //发送后样式     默认：color:#ccc;      需要传入按钮宽度
+    time=''             //倒计时时间    默认：60
+    sendSmsFn=''        //发送函数名   传入Page中的对象下的函数名
+                        //异步函数，需 return true/false    true表示发送短信成功
+                        //发送失败 直接在函数里     throw '失败原因';
+                        //函数中需要自己检查电话号码，和获取其它参数
+
+></b-sms>

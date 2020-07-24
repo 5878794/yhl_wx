@@ -1,0 +1,27 @@
+
+//可以用lib的jq库
+//需要 __publish 文件夹
+
+//input
+<b-input
+    class="b_input"
+    icon="../../images/5@1x.png"
+    type="text"
+    placeholder="电话号码"
+    name="电话"
+    id="name"
+    value="{{input.name}}"
+    rule="must,min:1,max:20,str"
+    err="请输入用户名"
+    bindmychange='function'
+></b-input>
+//password
+<b-input class="b_input" icon="../../images/5@1x.png" type="password" placeholder="电话号码" name="密码" id="password" value="{{input.password}}" ></b-input>
+//number
+<b-input class="b_input" icon="../../images/5@1x.png" type="number" placeholder="电话号码" name="数字" id="number" value="{{input.number}}" ></b-input>
+//idcard
+<b-input class="b_input" icon="../../images/5@1x.png" type="idcard" placeholder="电话号码" name="身份证" id="idcard" value="{{input.idcard}}" ></b-input>
+//digit
+<b-input class="b_input" icon="../../images/5@1x.png" type="digit" placeholder="电话号码" name="小数" id="digit" value="{{input.digit}}" ></b-input>
+//textarea
+<b-input class="b_input" icon="../../images/5@1x.png" type="textarea" placeholder="电话号码" name="文本框" id="textarea" value="{{input.textarea}}" ></b-input>

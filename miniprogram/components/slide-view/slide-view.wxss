@@ -1,0 +1,6 @@
+/* components/my-component.wxss */
+
+
+.test{
+  width: 100%; height: auto; display: block;
+}

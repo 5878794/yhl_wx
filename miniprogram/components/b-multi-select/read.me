@@ -1,0 +1,35 @@
+
+//可以用lib的jq库
+//需要 __publish 文件夹
+
+
+//multi-select
+//数据控制层级 2-4级   最好不要超过4级，显示不下
+
+
+//带级联关系data
+    //[{key:11,value:'a',children:[...]},...]
+//value（传递key）
+    // "key1,key2,key3"
+
+//不带级联关系data
+    //[[0,1,2,3,4,5],[1,2,3,6,7,8],[1,2,3,6,7,8]]
+//value （传递值）
+    // "值1,值2"
+
+
+<b-multi-select
+    class="b_input"
+    icon="../../images/5@1x.png"
+    type="multiSelector"
+    placeholder="电话号码"
+    cascade="true"          //是否是级联，注：数据格式不同
+    name="电话"
+    id="name"
+    selectData="{{selectData}}"         //[{key:11,value:'a',children:[...]},...]
+    value="{{key}}"                     //key的值   str:"1,1,1"
+    rule="must"
+    err="请输入用户名"
+    bindmychange='function'
+></b-multi-select>
+

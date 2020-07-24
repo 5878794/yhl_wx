@@ -1,0 +1,88 @@
+/*@import "./b_all.wxss";*/
+
+
+.body{
+    width:100%; box-sizing: border-box;
+}
+.name{
+    width: 160rpx; box-sizing: border-box;
+    font-size: 36rpx;
+}
+
+.input_body{
+    border:1rpx solid #ccc; box-sizing: border-box;
+}
+.input_body image{
+    display: block; width:50rpx; height: 50rpx;
+    margin: 0 20rpx;
+}
+
+.err{
+    width: 100%; color: red; line-height: 40rpx;
+    font-size: 30rpx; padding-left: 160rpx; box-sizing: border-box;
+}
+
+.__input__{
+    position: relative;
+    display: block; height: 80rpx; line-height: 80rpx;
+    font-size: 36rpx; color: #333; box-sizing: border-box;
+    padding:0 10rpx;
+}
+.__input_textarea__{
+    display: block; height: 240rpx; line-height: 60rpx;
+    font-size: 36rpx; color: #333; box-sizing: border-box;
+    padding:10rpx;
+    width:auto;
+}
+
+.show_text{
+    position: absolute; left:10rpx; top:0; right:20rpx; bottom:0;
+    padding-right: 34rpx;
+}
+.show_text:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left:12rpx solid transparent;
+    border-right:12rpx solid transparent;
+    border-top: 18rpx solid #666;
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-9rpx;
+}
+
+
+.disabledClass{
+    border-color:#eee;
+    color:#ccc !important;
+}
+.disabledClass input,
+.disabledClass textarea,
+.disabledClass picker view{
+    color:#eee !important;
+}
+.disabledClass picker view:after{
+    display: none;
+}
+
+
+
+.smsBtn{
+    display: inline-block;
+    padding:0 10rpx;
+    margin:0 10rpx;
+    border:1rpx solid #333;
+    text-align: center;
+}
+
+
+.isBtn{
+    transition: all 0.2s ease-in;
+}
+.isBtn:active{
+    opacity:0.6;
+}
+
+
+

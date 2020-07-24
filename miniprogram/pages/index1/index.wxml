@@ -1,0 +1,12 @@
+
+
+
+
+<view style="padding:0 20rpx;">
+    <b-input class="b_input" icon="../../images/5@1x.png" type="text" placeholder="电话号码" data-id="222" name="电话" id="name" value="{{input.name}}" rule="must,min:1,max:20,str"  err="请输入用户名" bindmychange="aaa"></b-input>
+
+</view>
+
+
+
+<view id="a1" bindtap="getVal">121312313</view>

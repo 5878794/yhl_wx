@@ -1,0 +1,24 @@
+
+//可以用lib的jq库
+//验证码输入框   继承input
+
+
+
+<b-yzm
+    class="b_input"
+    icon="../../images/5@1x.png"
+    placeholder="电话号码"
+    name="电话"
+    id="name"
+    value=""
+    rule="must"
+    err="请输入用户名"
+    yzmWidth='160'          //验证码图片宽度  rpx
+    yzmHeight='64'          //验证码图片高度
+
+    getYzmFn='getYZM'       //获取验证码的函数名，在传入的Page对象中
+                            //异步函数，需 return {src:'',token:''}  其中src必须
+                            //整个对象会被放入 yzm对象下的data下的catch中
+                            //jq获取方法  $('#yzm').attr('catch');
+                            //nodesRef对象  yzm.data.catch
+></b-yzm>

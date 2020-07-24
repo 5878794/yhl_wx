@@ -1,0 +1,33 @@
+
+
+
+<view class="box_slt">
+    <view class="box_hcc body">
+        <block wx:if="{{name}}">
+            <view class="name">{{name}}</view>
+        </block>
+        <view class="input_body box_hlc boxflex1 {{disabledClass}}">
+
+
+            <!--            判断是否有图标-->
+            <block wx:if="{{icon}}">
+                <image src="{{icon}}"></image>
+            </block>
+
+            <view class="boxflex1"></view>
+            <switch
+                    checked="{{checked}}"
+                    disabled="{{disabled}}"
+                    type="switch"
+                    color="{{color}}"
+                    bindchange="onchange">
+
+            </switch>
+
+
+
+
+        </view>
+    </view>
+    <!--    <view class="err">{{err}}</view>-->
+</view>

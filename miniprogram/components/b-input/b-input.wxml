@@ -1,0 +1,55 @@
+
+
+
+<view class="box_slt">
+    <view class="box_hcc body">
+        <block wx:if="{{name}}">
+            <view class="name">{{name}}</view>
+        </block>
+        <view class="input_body box_hlc boxflex1 {{disabledClass}}">
+
+
+
+
+
+
+<!--            判断是否有图标-->
+            <block wx:if="{{icon}}">
+                <image src="{{icon}}"></image>
+            </block>
+
+
+<!--            判断输入框类型-->
+<!--            文本-->
+            <block wx:if="{{type=='text'}}">
+                <input disabled="{{disabled}}" class="__input__ boxflex1" type="text" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindinput="onInput"/>
+            </block>
+<!--            密码-->
+            <block wx:elif="{{type=='password'}}">
+                <input disabled="{{disabled}}" class="__input__ boxflex1" type="text" placeholder="{{placeholder}}" password="true" value="{{value}}" rule="{{rule}}" bindinput="onInput"/>
+            </block>
+<!--            数字-->
+            <block wx:elif="{{type=='number'}}">
+                <input disabled="{{disabled}}" class="__input__ boxflex1" type="number" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindinput="onInput"/>
+            </block>
+<!--            身份证-->
+            <block wx:elif="{{type=='idcard'}}">
+                <input disabled="{{disabled}}" class="__input__ boxflex1" type="idcard" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindinput="onInput"/>
+            </block>
+<!--            带小数键盘-->
+            <block wx:elif="{{type=='digit'}}">
+                <input disabled="{{disabled}}" class="__input__ boxflex1" type="digit" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindinput="onInput"/>
+            </block>
+<!--            textarea-->
+            <block wx:elif="{{type=='textarea'}}">
+                <textarea disabled="{{disabled}}" class="__input_textarea__ boxflex1" type="number" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindinput="onInput"/>
+            </block>
+
+
+
+
+
+        </view>
+    </view>
+<!--    <view class="err">{{err}}</view>-->
+</view>

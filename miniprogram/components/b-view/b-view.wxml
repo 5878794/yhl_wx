@@ -1,0 +1,10 @@
+
+
+
+
+
+
+
+<view class="{{class1}}" style="{{style1}}">
+    <slot />
+</view>

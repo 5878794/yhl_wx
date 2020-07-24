@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "b-input": "../../components/b-input/b-input",
+    "b-select": "../../components/b-select/b-select",
+    "b-multi-select": "../../components/b-multi-select/b-multi-select",
+    "b-date":"../../components/b-date/b-date",
+    "b-area": "../../components/b-area/b-area",
+    "b-banner": "../../components/b-banner/b-banner",
+    "b-view": "../../components/b-view/b-view"
+  }
+}

@@ -1,0 +1,8 @@
+
+@import "../__publish/b-input.wxss";
+
+
+
+.input_body{
+    border:none;
+}

@@ -1,0 +1,32 @@
+
+//可以用lib的jq库
+//需要 __publish 文件夹
+
+
+//省市区  选择器
+//js:  用jq方便
+// let pages = getCurrentPages()    //获取加载的页面
+// let a = pages[pages.length-1]    //获取当前页面的对象le
+// let b = a.selectComponent('#area');
+
+// 取值
+// b.data.value
+// b.data.code          //用户选择才能获取到
+// b.data.postcode      //用户选择才能获取到
+
+// 赋值
+// b.value('四川省,成都市,金牛区')
+
+
+<b-area
+    class="b_input"
+    icon="../../images/5@1x.png"
+    placeholder="电话号码"
+    name="电话"
+    id="name"
+    customItem="全部"                //  每一列增加一个固定的选项
+    value=""                        //  '四川省,成都市,金牛区'
+    rule="must"
+    err="请输入用户名"
+    bindmychange='function'
+></b-date>
