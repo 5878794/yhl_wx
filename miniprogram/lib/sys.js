@@ -105,10 +105,23 @@ let sys = {
 	//打开新页面
 	//@param:url   str
 	openUrl(url) {
-		wx.redirectTo({ url: url });
+		wx.navigateTo({ url: url });
 	},
+	//关闭当前页面跳转到新页面，goback无法返回被关闭页面
 	closeAndOpenUrl(url){
 		wx.redirectTo({url:url});
+	},
+	//关闭所有打开的页面跳转到新页面
+	closeAllAndOpen(url){
+		wx.reLaunch({
+			url: url
+		})
+	},
+	//打开tab页面
+	openTabUrl(url){
+		wx.switchTab({
+			url: url
+		})
 	},
 
 	//返回前几页

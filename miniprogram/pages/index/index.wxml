@@ -9,9 +9,10 @@
 </b-view>
 
 <view style="padding:0 20rpx;">
+    <b-scan class="b_input"  icon="../../images/5@1x.png" placeholder=""  name="扫码" id="scan" value="" rule="must"  err="请输入用户名" time="10"  clickIcon="../../images/5@1x.png" nowBtnStyle="width:200rpx;height:40rpx;"></b-scan>
     <b-sms class="b_input" icon="../../images/5@1x.png" placeholder="请输入短信验证码"  name="短信" id="sms" value="" rule="must"  err="请输入用户名" time="10"  sendSmsFn="sendSmsFn"></b-sms>
     <b-yzm class="b_input" icon="../../images/5@1x.png" placeholder="请输入验证码"  name="验证码" id="yzm" value="" rule="must"  err="请输入用户名" yzmWidth="160" yzmHeight="64" getYzmFn="getYZM"></b-yzm>
-    <b-input class="b_input" icon="../../images/5@1x.png" type="text" placeholder="电话号码" data-id="222" name="电话" id="name" value="{{input.name}}" rule="must,min:1,max:20,str"  err="请输入用户名" bindmychange="aaa"></b-input>
+    <b-input class="b_input" disabled="true" icon="../../images/5@1x.png" type="text" placeholder="电话号码" data-id="222" name="电话" id="name" value="{{input.name}}" rule="must,min:1,max:20,str"  err="请输入用户名" bindmychange="aaa"></b-input>
     <b-input class="b_input" icon="../../images/5@1x.png" type="password" placeholder="电话号码" name="密码" id="password" value="{{input.password}}" ></b-input>
     <b-input class="b_input" icon="../../images/5@1x.png" type="number" placeholder="电话号码" name="数字" id="number" value="{{input.number}}" rule="must,phone" ></b-input>
     <b-input class="b_input" icon="../../images/5@1x.png" type="idcard" placeholder="电话号码" name="身份证" id="idcard" value="{{input.idcard}}" ></b-input>

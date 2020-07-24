@@ -1,0 +1,20 @@
+
+//可以用lib的jq库
+//需要 __publish 文件夹
+
+//点击扫码
+//input
+    <b-scan
+        class="b_input"
+        icon="../../images/5@1x.png"
+        placeholder=""
+        name="扫码"
+        id="scan"
+        value=""
+        rule="must"
+        disabled="true"                             //true时 点input可触发扫码
+        err="请输入用户名"
+        clickIcon="../../images/5@1x.png"           //点击触发扫描的按钮
+        nowBtnStyle="width:200rpx;height:40rpx;"    //按钮样式
+    >
+    </b-scan>
