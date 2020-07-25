@@ -1,0 +1,34 @@
+
+@import "../__publish/b-input.wxss";
+
+
+.choose_btn{
+    width:170rpx; height: 170rpx;
+    font-size:120rpx; background: #eee;
+    border:1rpx solid #ccc; color: #ccc;
+    line-height: 150rpx; text-align: center;
+    margin:0 20rpx 20rpx 0;
+}
+.imageItem{
+    width:170rpx; height: 170rpx;
+    border:1rpx solid #ccc;
+    position: relative;
+    margin:0 20rpx 20rpx 0;
+    overflow: hidden;
+}
+.del{
+    position: absolute;
+    left:0; bottom:0;
+    width:100%; height: 40rpx; text-align: center;
+    color: #fff; font-size: 24rpx;
+    background: rgba(0,0,0,0.5);
+}
+.input_body{
+    border:none;
+}
+.imageItem image{
+    display: block;
+    width: 100%; height: 100%;
+    margin: 0;
+    padding:0;
+}

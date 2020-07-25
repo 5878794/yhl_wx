@@ -1,0 +1,22 @@
+
+//可以用lib的jq库
+//需要 __publish 文件夹
+
+//上传照片
+
+    <b-image
+        class="b_input"
+        icon="../../images/5@1x.png"
+        sizeType="compressed"           //original,compressed  原图、压缩
+        sourceType="album,camera"       //album,camera  相册、相机
+        placeholder="请选择图片"
+        name="上传"
+        id="upload"
+        rule="must"
+        showDel="true"                 //是否显示删除按钮 默认不显示
+        max="10"                       //最大上传数量
+        nowBtnStyle="color:red;"       //上传按钮样式
+    >
+    </b-image>
+
+

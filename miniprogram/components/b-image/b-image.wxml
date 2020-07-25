@@ -1,0 +1,45 @@
+
+
+
+<view class="box_slt">
+    <view class="box_hlt body">
+        <block wx:if="{{name}}">
+            <view class="name">{{name}}</view>
+        </block>
+        <view class="input_body box_slt boxflex1">
+
+<!--        图表和提示文字容器-->
+            <view class="box_hlc" style="wdith:100%;">
+                <!--            判断是否有图标-->
+                <block wx:if="{{icon}}">
+                    <image src="{{icon}}"></image>
+                </block>
+                <block wx:if="{{placeholder}}">
+                    <view class="disabledClass">{{placeholder}}</view>
+                </block>
+            </view>
+
+
+<!--        文件容器-->
+            <view class="box_hlt box_lines" style="{{(placeholder || icon)? 'padding:20rpx' :''}}">
+
+                <block wx:for="{{values}}" wx:key="src">
+                    <view class="imageItem box_hcc" data-n="{{index}}" bindtap="chooseImage">
+                        <image  src="{{item.src}}"></image>
+                        <block wx:if="{{showDel}}">
+                            <view class="del" data-n="{{index}}" catchtap="del">删除</view>
+                        </block>
+                    </view>
+                </block>
+
+                <block wx:if="{{!disabled && values.length < max}}">
+<!--                    上传按钮-->
+                    <view class="choose_btn" style="{{nowBtnStyle}}" bindtap="chooseImage">+</view>
+                </block>
+            </view>
+
+
+        </view>
+    </view>
+<!--    <view class="err">{{err}}</view>-->
+</view>
