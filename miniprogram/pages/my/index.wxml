@@ -1,0 +1,41 @@
+<!--我的-->
+
+
+
+<view class="box_hcc my_title">
+    <image src="#"></image>
+    <view class="my_title_name boxflex1">大大东方</view>
+    <view class="box_hcc btn" style="width:200rpx;">
+        <view>余额</view>
+        <view class="my_money">580.00</view>
+    </view>
+</view>
+
+
+<view class="my_title">我的回收单</view>
+
+<view class="my_item box_slt">
+    <view class="my_item_title box_hlc">
+        <view>订单号:123123123123123123</view>
+        state1:待收货  state2:评估中  state3:已回收
+        <view class="state1">待收货</view>
+    </view>
+    <view class="my_item_row box_hlc">
+        <view class="my_item_row_name">产品</view>
+        <view class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</view>
+    </view>
+    <view class="my_item_row box_hlc">
+        <view class="my_item_row_name">状态</view>
+        <view class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</view>
+    </view>
+    <view class="my_item_row box_hlc">
+        <view class="my_item_row_name">联系</view>
+        <view class="boxflex1 my_item_row_text">
+            <image src="#"></image>
+        </view>
+    </view>
+    <view class="my_item_row box_hlc">
+        <view class="my_item_row_name">金额</view>
+        <view class="boxflex1 my_item_row_text">580.00</view>
+    </view>
+</view>

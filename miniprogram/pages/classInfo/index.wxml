@@ -1,0 +1,65 @@
+<!--类目页面-->
+
+
+<view class="search">搜索:华为MATE 20</view>
+
+
+<scroll-view
+        scroll-x="true"
+        scroll-y="false"
+        scroll-into-view=""
+        scroll-with-animation="true"
+        class="class_nav"
+>
+    <view class="box_hcc">
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+        <view class="class_nav_item">手机</view>
+    </view>
+</scroll-view>
+
+
+<view class="box_hlt">
+    <view class="box_slt">
+        <view class="class_lv2_item select">苹果在保</view>
+        <view class="class_lv2_item">苹果在保</view>
+        <view class="class_lv2_item">苹果在保</view>
+    </view>
+    <view class="box_slt">
+        <view class="class_lv3_item box_hlc">
+            <view class="class_lv3_no" style="{{}}">1</view>
+            <view class="boxflex1">苹果iphone11 pro</view>
+        </view>
+        <view class="class_lv3_item box_hlc">
+            <view class="class_lv3_no" style="{{}}">1</view>
+            <view class="boxflex1"></view>
+        </view>
+        <view class="class_lv3_item box_hlc">
+            <view class="class_lv3_no" style="{{}}">1</view>
+            <view class="boxflex1"></view>
+        </view>
+        <view class="class_lv3_item box_hlc">
+            <view class="class_lv3_no" style="{{}}">1</view>
+            <view class="boxflex1"></view>
+        </view>
+        <view class="class_lv3_item box_hlc">
+            <view class="class_lv3_no" style="{{}}">1</view>
+            <view class="boxflex1"></view>
+        </view>
+    </view>
+
+</view>

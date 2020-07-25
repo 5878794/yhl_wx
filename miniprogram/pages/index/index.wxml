@@ -1,36 +1,52 @@
+<!--首页-->
 
 
-<b-banner id="banner"  indicatorDots="{{false}}" indicatorColor="red" indicatorActiveColor="blue" previousMargin="20rpx" imgs="{{imgs}}" style="width:100%;height: 400rpx; display: block;"></b-banner>
+<view class="search">搜索:华为MATE 20</view>
+<b-banner id="banner"  indicatorDots="{{false}}" indicatorColor="red" indicatorActiveColor="blue" imgs="{{imgs}}" style="width:100%;height: 400rpx; display: block;"></b-banner>
 
-
-<b-view class1="box_hcc" style1="color:red;width:100%;" btt="test_2" id="test123">
-    <b-view class1="boxflex1 box_hcc">1111</b-view>
-    <b-view style1="width:120rpx;">22222</b-view>
-</b-view>
-
-<view style="padding:0 20rpx;">
-<!--    文件上传-->
-    <view class="skew"></view>
-    <b-image class="b_input" icon="../../images/5@1x.png" placeholder="请选择图片" name="上传" id="upload" rule="must" showDel="false" max="10" sourceType="camera" nowBtnStyle=""></b-image>
-    <b-scan class="b_input"  icon="../../images/5@1x.png" placeholder=""  name="扫码" id="scan" value="" rule="must"  err="请输入用户名" time="10"  clickIcon="../../images/5@1x.png" nowBtnStyle="width:200rpx;height:40rpx;"></b-scan>
-    <b-sms class="b_input" icon="../../images/5@1x.png" placeholder="请输入短信验证码"  name="短信" id="sms" value="" rule="must"  err="请输入用户名" time="10"  sendSmsFn="sendSmsFn"></b-sms>
-    <b-yzm class="b_input" icon="../../images/5@1x.png" placeholder="请输入验证码"  name="验证码" id="yzm" value="" rule="must"  err="请输入用户名" yzmWidth="160" yzmHeight="64" getYzmFn="getYZM"></b-yzm>
-    <b-input class="b_input" disabled="true" icon="../../images/5@1x.png" type="text" placeholder="电话号码" data-id="222" name="电话" id="name" value="{{input.name}}" rule="must,min:1,max:20,str"  err="请输入用户名" bindmychange="aaa"></b-input>
-    <b-input class="b_input" icon="../../images/5@1x.png" type="password" placeholder="电话号码" name="密码" id="password" value="{{input.password}}" ></b-input>
-    <b-input class="b_input" icon="../../images/5@1x.png" type="number" placeholder="电话号码" name="数字" id="number" value="{{input.number}}" rule="must,phone" ></b-input>
-    <b-input class="b_input" icon="../../images/5@1x.png" type="idcard" placeholder="电话号码" name="身份证" id="idcard" value="{{input.idcard}}" ></b-input>
-    <b-input class="b_input" icon="../../images/5@1x.png" type="digit" placeholder="电话号码" name="小数" id="digit" value="{{input.digit}}" ></b-input>
-    <b-input class="b_input" icon="../../images/5@1x.png" type="textarea" placeholder="电话号码" name="文本框" id="textarea" value="{{input.textarea}}" ></b-input>
-
-    <b-select class="b_input" icon="../../images/5@1x.png" type="select" placeholder="电话号码" selectData="{{selectData}}" name="单选" id="select" rule="must,min:3" value="{{input.select}}" ></b-select>
-    <b-multi-select class="b_input" icon="../../images/5@1x.png" cascade="true" type="multiSelector" placeholder="电话号码" selectData="{{selectData3}}" name="单选" id="mSelect" rule="must" value="{{selectValue3}}"  ></b-multi-select>
-    <b-multi-select class="b_input" icon="../../images/5@1x.png" cascade="false" type="multiSelector" placeholder="电话号码" selectData="{{selectData4}}" name="单选" id="m1Select" rule="must" value="{{selectValue4}}"  ></b-multi-select>
-    <b-date class="b_input" icon="../../images/5@1x.png" type="time" start="08:00" end="21:00" placeholder="电话号码" name="密码" id="time" value="09:03" ></b-date>
-    <b-date class="b_input" icon="../../images/5@1x.png" type="date" start="2020-11-11" end="2022-11-11" placeholder="电话号码" name="密码" id="date" value="2020-12-12" ></b-date>
-    <b-area class="b_input" customItem="全部" icon="../../images/5@1x.png"  placeholder="电话号码" name="密码" id="area" value='四川省,成都市,金牛区' ></b-area>
-    <b-radio color="red" class="b_input" icon="../../images/5@1x.png" id="radio" name="名字"></b-radio>
+<view class="index_nav box_hcc">
+    <view class="index_nav_item box_sct">
+        <image src=""></image>
+        <view>保修查询</view>
+    </view>
+    <view class="index_nav_item box_sct">
+        <image src=""></image>
+        <view>手机回收</view>
+    </view>
+    <view class="index_nav_item box_sct">
+        <image src=""></image>
+        <view>批量回收</view>
+    </view>
 </view>
 
 
+<view class="btn box_hcc">免费评估</view>
 
-<view class="ta1" id="a1" bindtap="getVal" tt="dd">121312313</view>
+
+
+<!--回收类别-->
+<view class="title box_hlc">回收类别</view>
+<view class="box_hlt box_lines">
+    <view class="index_item1 box_hcc">手机</view>
+    <view class="index_item2 box_hcc">平板</view>
+    <view class="index_item3 box_hcc">只能手表</view>
+    <view class="index_item4 box_hcc">笔记本</view>
+    <view class="index_item5 box_hcc">相机</view>
+    <view class="index_item6 box_hcc">蓝牙耳机</view>
+</view>
+
+
+<!--下单流程-->
+<view class="title box_hlc">
+    <view class="boxflex1">下单流程</view>
+    <view class="title_info">— 简单5步，回收如此简单</view>
+</view>
+<view class="box_hcc">
+    <view class="index_item7 box_hcc">选机型</view>
+    <view class="index_item_arrow"></view>
+    <view class="index_item8 box_hcc">查价格</view>
+    <view class="index_item_arrow"></view>
+    <view class="index_item9 box_hcc">邮寄/上门回收</view>
+    <view class="index_item_arrow"></view>
+    <view class="index_item10 box_hcc">收款</view>
+</view>

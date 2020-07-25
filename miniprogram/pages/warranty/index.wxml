@@ -1,0 +1,49 @@
+<!--保修查询-->
+
+
+<view class="warranty_pp box_hcc box_lines">
+    <view class="warranty_pp_item">苹果保修</view>
+    <view class="warranty_pp_item">苹果激活锁</view>
+    <view class="warranty_pp_item">苹果网络锁</view>
+    <view class="warranty_pp_item">三星保修</view>
+    <view class="warranty_pp_item">华为保修</view>
+    <view class="warranty_pp_item">OPPO保修</view>
+    <view class="warranty_pp_item">VIVO保修</view>
+    <view class="warranty_pp_item">小米保修</view>
+    <view class="warranty_pp_item">小米账号锁</view>
+</view>
+
+
+<view class="title box_hlc">保修查询</view>
+<view class="search">
+    <b-input class="search_input" placeholder="输入IMEI号" icon=""></b-input>
+</view>
+
+<view class="btn box_hcc">查询（剩余3次）</view>
+
+
+<view class="title box_hlc">最近20条查询记录</view>
+
+<view class="warrant_search_item">
+    <view class="warrant_search_item_title">IMEI:1231231231231231</view>
+    <view class="box_hlc">
+        <view class="warrant_search_item_name">设备颜色</view>
+        <view class="boxflex1 warrant_search_item_text">金色</view>
+    </view>
+    <view class="box_hlc">
+        <view class="warrant_search_item_name">设备容量</view>
+        <view class="boxflex1 warrant_search_item_text">金色</view>
+    </view>
+    <view class="box_hlc">
+        <view class="warrant_search_item_name">网络型号</view>
+        <view class="boxflex1 warrant_search_item_text">金色</view>
+    </view>
+    <view class="box_hlc">
+        <view class="warrant_search_item_name">是否激活</view>
+        <view class="boxflex1 warrant_search_item_text">金色</view>
+    </view>
+    <view class="box_hlc">
+        <view class="warrant_search_item_name">电话支持</view>
+        <view class="boxflex1 warrant_search_item_text">金色</view>
+    </view>
+</view>
