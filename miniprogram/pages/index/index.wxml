@@ -1,20 +1,27 @@
 <!--首页-->
 
 
-<view class="search">搜索:华为MATE 20</view>
-<b-banner id="banner"  indicatorDots="{{false}}" indicatorColor="red" indicatorActiveColor="blue" imgs="{{imgs}}" style="width:100%;height: 400rpx; display: block;"></b-banner>
+<view class="search box_hlc">
+    <image src="../../images/_search_input.png"></image>
+    <view class="boxflex1">搜索：华为META 20</view>
+</view>
+<b-banner
+        class="banner"
+        indicatorDots="{{false}}"
+        imgs="{{[{img:'../../images/_banner1.png',href:''}]}}">
+</b-banner>
 
 <view class="index_nav box_hcc">
     <view class="index_nav_item box_sct">
-        <image src=""></image>
+        <image src="../../images/1.png"></image>
         <view>保修查询</view>
     </view>
     <view class="index_nav_item box_sct">
-        <image src=""></image>
+        <image src="../../images/2.png"></image>
         <view>手机回收</view>
     </view>
     <view class="index_nav_item box_sct">
-        <image src=""></image>
+        <image src="../../images/3.png"></image>
         <view>批量回收</view>
     </view>
 </view>
@@ -26,13 +33,43 @@
 
 <!--回收类别-->
 <view class="title box_hlc">回收类别</view>
-<view class="box_hlt box_lines">
-    <view class="index_item1 box_hcc">手机</view>
-    <view class="index_item2 box_hcc">平板</view>
-    <view class="index_item3 box_hcc">只能手表</view>
-    <view class="index_item4 box_hcc">笔记本</view>
-    <view class="index_item5 box_hcc">相机</view>
-    <view class="index_item6 box_hcc">蓝牙耳机</view>
+<view class="box_hlt box_lines index_types">
+    <view class="index_item1 index_item box_hlc">
+        <view class="index_item_icon box_hcc">
+            <image src="../../images/_index_item1.png"></image>
+        </view>
+        <view class="boxflex1 box_hcc">手机</view>
+    </view>
+    <view class="index_item2 index_item box_hlc">
+        <view class="index_item_icon box_hcc">
+            <image src="../../images/_index_item2.png"></image>
+        </view>
+        <view class="boxflex1 box_hcc">平板</view>
+    </view>
+    <view class="index_item3 index_item box_hlc index_item_padding_left_no">
+        <view class="index_item_icon box_hcc">
+            <image src="../../images/_index_item3.png"></image>
+        </view>
+        <view class="boxflex1 box_hcc">智能手表</view>
+    </view>
+    <view class="index_item4 index_item box_hlc">
+        <view class="index_item_icon box_hcc">
+            <image src="../../images/_index_item4.png"></image>
+        </view>
+        <view class="boxflex1 box_hcc">笔记本</view>
+    </view>
+    <view class="index_item5 index_item box_hlc">
+        <view class="index_item_icon box_hcc">
+            <image src="../../images/_index_item5.png"></image>
+        </view>
+        <view class="boxflex1 box_hcc">相机</view>
+    </view>
+    <view class="index_item6 index_item box_hlc index_item_padding_left_no">
+        <view class="index_item_icon box_hcc">
+            <image src="../../images/_index_item6.png"></image>
+        </view>
+        <view class="boxflex1 box_hcc">蓝牙耳机</view>
+    </view>
 </view>
 
 
@@ -41,12 +78,30 @@
     <view class="boxflex1">下单流程</view>
     <view class="title_info">— 简单5步，回收如此简单</view>
 </view>
-<view class="box_hcc">
-    <view class="index_item7 box_hcc">选机型</view>
-    <view class="index_item_arrow"></view>
-    <view class="index_item8 box_hcc">查价格</view>
-    <view class="index_item_arrow"></view>
-    <view class="index_item9 box_hcc">邮寄/上门回收</view>
-    <view class="index_item_arrow"></view>
-    <view class="index_item10 box_hcc">收款</view>
+<view class="box_hct index_lc">
+    <view class="index_item_lc box_sct">
+        <image class="index_item_lc_icon1" src="../../images/_index_lc1.png"></image>
+        <view>选机型</view>
+    </view>
+    <view class="index_item_arrow box_hcc">
+        <image src="../../images/_index_lc5.png"></image>
+    </view>
+    <view class="index_item_lc box_sct">
+        <image class="index_item_lc_icon2" src="../../images/_index_lc2.png"></image>
+        <view>查价格</view>
+    </view>
+    <view class="index_item_arrow box_hcc">
+        <image src="../../images/_index_lc5.png"></image>
+    </view>
+    <view class="index_item_lc box_sct">
+        <image class="index_item_lc_icon3" src="../../images/_index_lc3.png"></image>
+        <view>邮寄/上门回收</view>
+    </view>
+    <view class="index_item_arrow box_hcc">
+        <image src="../../images/_index_lc5.png"></image>
+    </view>
+    <view class="index_item_lc box_sct">
+        <image class="index_item_lc_icon4" src="../../images/_index_lc4.png"></image>
+        <view>收款</view>
+    </view>
 </view>

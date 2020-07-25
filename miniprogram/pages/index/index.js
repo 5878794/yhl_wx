@@ -14,7 +14,6 @@ var a = {
 
 	onLoad: function() {
 
-
 	}
 
 };

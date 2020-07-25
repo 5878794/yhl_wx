@@ -1,9 +1,10 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/my/index",
         "pages/warranty/index",
-        "pages/classInfo/index",
-        "pages/index/index"
+        "pages/classInfo/index"
+
 
     ],
     "window": {
@@ -14,5 +15,35 @@
         "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",
-    "style": "v2"
+    "style": "v2",
+    "tabBar":{
+        "color": "#000000",
+        "selectedColor": "#47d7f7",
+        "list":[
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./images/nav1.png",
+                "selectedIconPath": "./images/nav1_.png"
+            },
+            {
+                "pagePath": "pages/classInfo/index",
+                "text": "类目",
+                "iconPath": "./images/nav2.png",
+                "selectedIconPath": "./images/nav2_.png"
+            },
+            {
+                "pagePath": "pages/warranty/index",
+                "text": "保修查询",
+                "iconPath": "./images/nav3.png",
+                "selectedIconPath": "./images/nav3_.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "./images/nav4.png",
+                "selectedIconPath": "./images/nav4_.png"
+            }
+        ]
+    }
 }
