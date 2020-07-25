@@ -258,6 +258,26 @@ view{
 }
 
 
+.skew{
+  position: relative;
+  display: inline-block;
+  font-size: 24rpx;
+  padding:0 10rpx;
+  color: #fff;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+}
+.skew:before{
+  content: '';
+  position: absolute;
+  left:0; top:0; right:0; bottom:0;
+  z-index:-1;
+  background: red;
+  transform:skew(-30deg);
+}
+
+
 
 /*添加字体*/
 /*@font-face {*/
