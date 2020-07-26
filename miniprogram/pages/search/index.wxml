@@ -1,0 +1,27 @@
+
+<view class="search box_hlc">
+    <image src="../../images/_search_input.png"></image>
+    <input type="text" class="boxflex1" placeholder-class="input_placeholder" placeholder="搜索：华为META 20"/>
+</view>
+
+<view class="search_list">
+    <view class="local_history">
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+        <view class="local_history_item">手机地方</view>
+    </view>
+    <view class="online_search hidden">
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+        <view class="online_search_item diandian">ad司法局奥斯卡积分卡时间</view>
+    </view>
+</view>

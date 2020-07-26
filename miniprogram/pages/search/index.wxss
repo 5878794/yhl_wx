@@ -1,0 +1,36 @@
+
+
+.local_history{
+    padding:60rpx 30rpx;
+}
+
+.search_list{
+    position: relative;
+}
+
+.local_history_item{
+    display: inline-block;
+    padding:0 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border:1rpx solid #ccc;
+    border-radius: 10rpx;
+    color: #ccc;
+    margin:0 30rpx 30rpx 0;
+}
+
+.online_search{
+    position: absolute;
+    left:0; top:0;
+    width: 100%; padding:30rpx;
+    background: #fff;
+}
+.online_search_item{
+    width: 100%; border-bottom:1rpx solid #eee;
+    font-size:32rpx;
+    color:rgba(69,69,69,1);
+    height: 107rpx;
+    line-height: 107rpx;
+    text-indent: 2em;
+    font-weight: 200;
+}
