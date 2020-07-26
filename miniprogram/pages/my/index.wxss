@@ -78,6 +78,10 @@ page{
 }
 .my_item_row_text image{
     width: 44rpx; height: 34rpx; display: block;
+    margin-left: 40rpx;
+}
+.my_item_row_text .copy{
+    display: block; width: 44rpx; height: 44rpx;
 }
 
 .state1,

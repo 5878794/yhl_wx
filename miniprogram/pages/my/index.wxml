@@ -30,14 +30,18 @@
             <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
         </view>
         <view class="my_item_row box_hlc">
+            <view class="my_item_row_name">发货时间</view>
+            <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
+        </view>
+        <view class="my_item_row box_hlc">
             <view class="my_item_row_name">状态</view>
             <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
         </view>
         <view class="my_item_row box_hlc">
             <view class="my_item_row_name">联系</view>
             <view class="boxflex1 my_item_row_text box_hrc">
+                <image class="copy" src="../../images/copy.png"></image>
                 <image src="../../images/wechart.png"></image>
-                <image src="../../images/wechart_.png"></image>
             </view>
         </view>
 <!--        状态是已回收才会有金额-->
@@ -48,32 +52,3 @@
     </view>
 </view>
 
-<view class="my_item box_slt">
-    <view class="my_item_body">
-        <view class="my_item_title box_hlc">
-            <view>订单号:</view>
-            <text>123123123123123123</text>
-            <!--        state1:待收货  state2:评估中  state3:已回收-->
-            <view class="state1 boxflex1">待收货</view>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">产品</view>
-            <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">状态</view>
-            <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">联系</view>
-            <view class="boxflex1 my_item_row_text box_hrc">
-                <image src="../../images/wechart.png"></image>
-                <image src="../../images/wechart_.png"></image>
-            </view>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">金额</view>
-            <text class="boxflex1 my_item_row_text">580.00</text>
-        </view>
-    </view>
-</view>
