@@ -14,7 +14,9 @@
         next-margin="{{nextMargin}}">
     <block wx:for="{{imgs}}" wx:key="img">
         <swiper-item>
-            <view class="banner_list" style="background-image: url({{item.img}})" data-data="{{item}}" bindtap="onclick"></view>
+            <view class="banner_list" data-data="{{item}}" bindtap="onclick">
+                <image src="{{item.img}}"></image>
+            </view>
         </swiper-item>
     </block>
 </swiper>
