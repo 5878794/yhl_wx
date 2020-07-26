@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/assessment/index",
         "pages/recover/index",
         "pages/order/index",
         "pages/my/index",

@@ -1,0 +1,63 @@
+
+
+<view class="pg_body box_sct">
+    <image mode="widthFix" src="../../images/pg_bg.png"></image>
+    <view class="pg_title">评估</view>
+    <view class="pg_info">阿福卡点击发送金风科技affect</view>
+    <view class="pg_btn box_hcc">￥ 1500</view>
+</view>
+
+<view class="pg_item_body">
+    <view class="pg_item_title">
+        <view class="pg_item_title_no">
+            <view>1</view>
+        </view>
+        <view class="pg_item_title_name">存储</view>
+    </view>
+    <view class="pg_item">64G</view>
+    <view class="pg_item select">点击发电机房</view>
+    <view class="pg_item">点击发电机房</view>
+    <view class="pg_item">点击发电机房</view>
+</view>
+<view class="pg_item_body">
+    <view class="pg_item_title">
+        <view class="pg_item_title_no">
+            <view>1</view>
+        </view>
+        <view class="pg_item_title_name">存储</view>
+    </view>
+    <view class="pg_item">64G</view>
+    <view class="pg_item select">点击发电机房</view>
+    <view class="pg_item">点击发电机房</view>
+    <view class="pg_item">点击发电机房</view>
+</view>
+<view class="pg_item_body">
+    <view class="pg_item_title">
+        <view class="pg_item_title_no">
+            <view>1</view>
+        </view>
+        <view class="pg_item_title_name">存储</view>
+    </view>
+    <view class="pg_item">64G</view>
+    <view class="pg_item select">点击发电机房</view>
+    <view class="pg_item">点击发电机房</view>
+    <view class="pg_item">点击发电机房</view>
+</view>
+
+
+
+
+
+
+<view class="bottom_nav box_hlc" style="background: #fff;">
+    <view class="bottom_nav_icon canActive box_scc">
+        <image src="../../images/nav1_.png"></image>
+        <view>首页</view>
+    </view>
+    <view class="bottom_nav_btn1 boxflex1 canActive box_hcc">联系客服</view>
+    <view class="bottom_nav_btn2 boxflex1 canActive box_hcc">邮寄下单</view>
+</view>
+
+
+
+

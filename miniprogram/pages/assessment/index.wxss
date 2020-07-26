@@ -1,0 +1,105 @@
+
+
+
+.pg_body{
+    width: 100%; height: 460rpx;
+    position: relative;
+    overflow: hidden;
+}
+.pg_body image{
+    position: absolute;
+    left:-50rpx;
+    top:-400rpx;
+    width: 900rpx;
+    z-index: -1;
+}
+
+.pg_title{
+    padding-top:60rpx;
+    font-size:48rpx;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    line-height: 80rpx;
+}
+.pg_info{
+    font-size:32rpx;
+    color:rgba(146,211,254,1);
+    line-height: 60rpx;
+    padding-bottom:20rpx;
+}
+.pg_btn{
+    width:453rpx;
+    height:100rpx;
+    background:rgba(255,136,0,1);
+    box-shadow:0 0 19rpx 0 rgba(0, 0, 0, 0.08);
+    border-radius:50rpx;
+    font-size:48rpx;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+
+
+
+.pg_item_body{
+    width: 690rpx; margin: 40rpx auto;
+    border:1rpx solid #ccc;
+    position: relative;
+    padding: 60rpx 40rpx 20rpx 40rpx;
+    border-radius: 10rpx;
+    margin-bottom: 40rpx;
+}
+.pg_item_title{
+    position: absolute;
+    background: #fff;
+    display: inline-block;
+    left:20rpx; top:-15rpx;
+    padding:0 20rpx;
+    line-height: 30rpx;
+}
+.pg_item_title_no{
+    display: inline-block;
+    width: 50rpx;
+    height: 30rpx;
+    position: relative;
+}
+.pg_item_title_no:before{
+    content: '';
+    display: block;
+    width: 30rpx; height: 30rpx;
+    transform: skew(-30deg);
+    background: #50ddfc;
+    position: absolute; left:0; top:0;
+    z-index: 1;
+}
+.pg_item_title_no view{
+    display: block;
+    width: 30rpx; height: 30rpx;
+    font-size:24rpx;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    line-height: 30rpx;
+    position: absolute;
+    left:0; top:0;
+    z-index: 2;
+}
+.pg_item_title_name{
+    display: inline-block;
+    font-size:32rpx;
+    color:rgba(51,51,51,1);
+    font-weight: bold;
+}
+
+.pg_item{
+    padding:0 40rpx; height: 50rpx; line-height: 50rpx;
+    display: inline-block;
+    background:rgba(243,243,243,1);
+    border-radius:25rpx;
+    font-size:24rpx;
+    color:rgba(204,204,204,1);
+    margin:0 20rpx 20rpx 0;
+}
+
+.pg_item_body .select{
+    background:rgba(255,136,0,1);
+    color: #fff;
+}
