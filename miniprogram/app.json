@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/recover/index",
         "pages/order/index",
         "pages/my/index",
         "pages/warranty/index",

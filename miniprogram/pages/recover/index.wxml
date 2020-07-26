@@ -1,0 +1,19 @@
+
+
+<view class="order_input_body">
+    <b-input class="order_input box_hcc" type="number" name="物品数量" rule="must" err="请输入物品数量" placeholder="请输入数量" id="number"></b-input>
+    <b-image class="order_input order_input1 box_hcc" max="1" type="text" name="物品照片" rule="must" err="请拍照" placeholder="请将所有物品拍到一张图片中" id="image"></b-image>
+</view>
+
+<view class="bottom_nav box_hlc">
+    <view class="bottom_nav_icon canActive box_scc">
+        <image src="../../images/nav1_.png"></image>
+        <view>首页</view>
+    </view>
+    <view class="bottom_nav_btn1 boxflex1 canActive box_hcc">联系客服</view>
+    <view class="bottom_nav_btn2 boxflex1 canActive box_hcc">邮寄下单</view>
+</view>
+
+
+
+

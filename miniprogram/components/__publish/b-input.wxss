@@ -57,6 +57,7 @@
 .disabledClass{
     border-color:#eee;
     color:#ccc !important;
+    padding:0 10rpx;
 }
 .disabledClass input,
 .disabledClass textarea,
