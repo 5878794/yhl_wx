@@ -9,7 +9,7 @@ app.globalData.$ = $;
 
 var a = {
 	data: {
-
+		banner:[{img:'../../images/_banner1.png',href:''}]
 	},
 
 	onLoad: function() {

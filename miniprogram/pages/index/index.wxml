@@ -8,7 +8,7 @@
 <b-banner
         class="banner"
         indicatorDots="{{false}}"
-        imgs="{{[{img:'../../images/_banner1.png',href:''}]}}">
+        imgs="{{banner}}">
 </b-banner>
 
 <view class="index_nav box_hcc">

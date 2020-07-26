@@ -327,7 +327,6 @@ view{
   border-radius:37px;
   margin:0 auto;
   font-size:24rpx;
-  font-family:PingFang SC;
   font-weight:500;
   color:rgba(204,204,204,1);
   padding:0 25rpx;
@@ -337,6 +336,12 @@ view{
   display: block;
   width: 43rpx; height: 40rpx;
   margin-right:15rpx;
+}
+.search input{
+  color: #333;
+}
+.input_placeholder{
+  color: #ccc;
 }
 
 .btn{

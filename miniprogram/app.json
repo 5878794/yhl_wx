@@ -1,9 +1,10 @@
 {
     "pages": [
+        "pages/warranty/index",
         "pages/classInfo/index",
         "pages/index/index",
-        "pages/my/index",
-        "pages/warranty/index"
+        "pages/my/index"
+
 
 
 
