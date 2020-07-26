@@ -1,2 +1,9 @@
 
 @import "../__publish/b-input.wxss";
+
+
+.image_body{
+    padding:0 10rpx 0 20rpx;
+    height: 80rpx;
+    width:auto;
+}

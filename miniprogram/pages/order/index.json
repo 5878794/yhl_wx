@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "b-input": "../../components/b-input/b-input",
+    "b-scan": "../../components/b-scan/b-scan"
+  }
+}

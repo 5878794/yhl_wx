@@ -1,0 +1,32 @@
+
+
+<view class="title box_hlc">发货信息</view>
+
+<view class="order_input_body">
+    <b-input class="order_input box_hcc" type="text" name="物流公司" rule="must" err="请输入物流公司名称" placeholder="请输入物流公司名称" id="company"></b-input>
+    <b-scan clickIcon="../../images/scan.png" nowBtnStyle="width:25rpx;height:26rpx;" class="order_input box_hcc" type="text" name="物流单号" rule="must" err="请输入物流订单号或扫描条码" placeholder="请输入物流订单号或扫描条码" id="ordierId"></b-scan>
+    <b-input class="order_input box_hcc" type="number" name="手机号码" rule="must" err="请输入手机号码" placeholder="请输入手机号码" id="phone"></b-input>
+    <b-input class="order_input box_hcc" type="text" name="备注" rule="must" err="请输入手机号码" placeholder="发货备注（选填）" id="bz"></b-input>
+
+    <view class="btn box_hcc canActive">提交</view>
+    <view class="input_info box_hcc">邮寄流程: 邮寄发货 -> 拆包检测 -> 精准估价 -> 收款码付款</view>
+</view>
+
+<view class="jg"></view>
+
+
+<view class="title box_hlc">邮寄地址</view>
+
+
+<block wx:for="{{address}}" wx:key="id">
+    <view class="address box_hlt">
+        <!--    1:#fa4e18    2:#42ffcc-->
+        <view class="address_no box_hcc" style="background:{{(index==0)? '#fa4e18' : (index==1)?'#42ffcc': '#ccc'}}">{{index+1}}</view>
+        <view class="boxflex1">
+            <view class="address_name">{{item.name}}</view>
+            <view class="address_address">{{item.address}}</view>
+            <view class="address_phone">{{item.phone}}</view>
+        </view>
+    </view>
+</block>
+

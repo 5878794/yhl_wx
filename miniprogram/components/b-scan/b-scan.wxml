@@ -20,10 +20,12 @@
 
 
 
-            <input disabled="{{disabled}}" class="__input__ boxflex1" type="text" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindtap="{{(disabled)? 'onclick' : ''}}" bindinput="onInput"/>
+            <input  placeholder-class="placeholder_style" disabled="{{disabled}}" class="__input__ boxflex1" type="text" placeholder="{{placeholder}}" value="{{value}}" rule="{{rule}}" bindtap="{{(disabled)? 'onclick' : ''}}" bindinput="onInput"/>
 
             <block wx:if="{{clickIcon}}">
-                <image class="isBtn" src="{{clickIcon}}" style="{{nowBtnStyle}}" bindtap="onclick"></image>
+                <view class="image_body box_hcc" bindtap="onclick">
+                    <image class="isBtn" src="{{clickIcon}}" style="{{nowBtnStyle}}"></image>
+                </view>
             </block>
 
 
