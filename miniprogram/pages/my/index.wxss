@@ -19,6 +19,11 @@ page{
     font-size: 34rpx;
     padding:0 20rpx;
 }
+
+.my_title .btns{
+    width: 270rpx;
+}
+
 .my_title .btn{
     border-radius: 60rpx;
     padding:0 30rpx;
@@ -97,4 +102,32 @@ page{
 }
 .state3{
     color:rgba(69,69,69,1);
+}
+
+
+/*.wx_kf{*/
+/*    width: 270rpx; height: 77rpx;*/
+/*    border-radius: 77rpx;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*}*/
+.wx_kf{
+    /*position: absolute; left:0; top:0;*/
+    /*z-index: 10;*/
+    width: 270rpx; height: 77rpx;
+    font-size:32rpx;
+    color:#fff;
+    border-radius: 77rpx;
+    background-color:green;
+    margin-top: 20rpx;
+    position: relative;
+}
+.wx_kf image{
+    display: block;
+    width: 43rpx; height: 33rpx;
+    border: none;
+    margin-right: 30rpx;
+}
+.wx_kf_btn{
+    position: absolute; left:0; top:0; right:0; bottom:0;
 }

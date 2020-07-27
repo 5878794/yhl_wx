@@ -18,7 +18,6 @@ var a = {
 	},
 
 	setClipboard(e){
-		console.log(e)
 		let text = e.currentTarget.dataset.copy || '';
 		sys.setClipboard(text);
 	}
