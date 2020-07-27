@@ -256,6 +256,19 @@ let sys = {
 				success();
 			},ms)
 		})
+	},
+
+	//设置剪贴板内容
+	setClipboard(text){
+		return new Promise(success=>{
+			wx.setClipboardData({
+				data: text,
+				success () {
+					success();
+				}
+			})
+		})
+
 	}
 };
 

@@ -40,7 +40,7 @@
         <view class="my_item_row box_hlc">
             <view class="my_item_row_name">联系</view>
             <view class="boxflex1 my_item_row_text box_hrc">
-                <image class="copy" src="../../images/copy.png"></image>
+                <image class="copy" src="../../images/copy.png" data-copy="阿迪饭卡空间的饭卡上的卡就是看到飞机卡撒地方看见" bindtap="setClipboard"></image>
                 <image src="../../images/wechart.png"></image>
             </view>
         </view>
