@@ -1,0 +1,10 @@
+
+
+
+
+
+<view class="button_body">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <slot></slot>
+    </button>
+</view>

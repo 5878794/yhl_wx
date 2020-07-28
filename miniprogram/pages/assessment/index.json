@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "b-login-button": "../../components/b-login-button/b-login-button",
+    "b-a": "../../components/b-a/b-a"
+  },
   "navigationBarTitleText": "评估申请"
 }

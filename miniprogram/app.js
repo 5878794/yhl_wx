@@ -15,9 +15,9 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {};
   },
-    onError(msg){
+  onError(msg){
       console.log(msg)
   }
 })

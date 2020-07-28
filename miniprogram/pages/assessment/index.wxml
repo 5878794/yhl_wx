@@ -4,7 +4,16 @@
     <image mode="widthFix" src="../../images/pg_bg.png"></image>
     <view class="pg_title">评估</view>
     <view class="pg_info">阿福卡点击发送金风科技affect</view>
-    <view class="pg_btn box_hcc">￥ 1500</view>
+    <view class="pg_btn box_hcc {{(hidden)? 'hidden' : ''}}">
+        <block wx:if="{{hasLogin}}">
+            <view>￥ 1500</view>
+        </block>
+        <block wx:else>
+            <b-login-button bindsuccess="getUserInfoSuccess">
+                <view>微信登录</view>
+            </b-login-button>
+        </block>
+    </view>
 </view>
 
 <view class="pg_item_body">
@@ -50,15 +59,19 @@
 
 <view class="bottom_nav_"></view>
 <view class="bottom_nav box_hlc" style="background: #fff;">
-    <view class="bottom_nav_icon canActive box_scc">
-        <image src="../../images/nav1_.png"></image>
-        <view>首页</view>
-    </view>
+    <b-a type="tab" url="../index/index">
+        <view class="bottom_nav_icon canActive box_scc">
+            <image src="../../images/nav1_.png"></image>
+            <view>首页</view>
+        </view>
+    </b-a>
     <view class="bottom_nav_btn1 boxflex1 canActive box_hcc">
         <button open-type="contact" style="opacity:0;"></button>
         <view>联系客服</view>
     </view>
-    <view class="bottom_nav_btn2 boxflex1 canActive box_hcc">邮寄下单</view>
+    <b-a url="../order/index" class="bottom_nav_btn2 boxflex1 canActive box_hcc">
+        <view>邮寄下单</view>
+    </b-a>
 </view>
 
 

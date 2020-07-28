@@ -1,4 +1,8 @@
 
+import server from "./server";
+
+
+
 
 
 let sys = {
@@ -286,6 +290,51 @@ let sys = {
 			backData[item[0]] = item[1];
 		});
 		return backData;
+	},
+	//保存用户信息及openid等
+	saveUserInfo(info){
+		const app = getApp();
+		app.globalData.openId = info.openId;
+		app.globalData.appId = info.appId;
+	},
+	//获取用户信息
+	getUserInfo(){
+		const app = getApp();
+		return new Promise(success=>{
+			wx.getSetting({
+				success (res){
+					if (res.authSetting['scope.userInfo']) {
+						// 已经授权，可以直接调用 getUserInfo 获取头像昵称
+						wx.getUserInfo({
+							success: function(res) {
+								let info = res.userInfo;
+								console.log(getApp().globalData)
+								if(app.globalData.openId && app.globalData.appId){
+									info.openId = app.globalData.openId;
+									info.appId = app.globalData.appId;
+									success(info);
+								}else{
+									server.login().then(rs=>{
+										let loginInfo = rs.event.userInfo;
+										info.openId = loginInfo.openId;
+										info.appId = loginInfo.appId;
+										//缓存
+										app.globalData.openId = info.openId;
+										app.globalData.appId = info.appId;
+										success(info);
+									}).catch(e=>{
+										sys.alert(e);
+									});
+								}
+
+							}
+						})
+					}else{
+						success(null);
+					}
+				}
+			})
+		});
 	}
 };
 

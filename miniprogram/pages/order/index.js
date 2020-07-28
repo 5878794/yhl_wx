@@ -6,6 +6,7 @@ import sys from '../../lib/sys.js';
 import $ from '../../lib/jq.js';
 
 
+
 Page({
 	data: {
 		address:[
@@ -29,6 +30,19 @@ Page({
 
 
 
+	},
+	submit(){
+		this.submitFn().then().catch(e=>{sys.alert(e.msg)});
+	},
+	async submitFn(){
+		//物流公司名称
+		let name = await $('#company').check(),
+			//物流单号
+			orderId = await $('#ordierId').check(),
+			phone = await $('#phone').check(),
+			bz = await $('#bz').check();
+
+		console.log(name,orderId,phone,bz)
 	}
 
 });
