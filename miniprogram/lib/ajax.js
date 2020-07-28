@@ -52,7 +52,11 @@ let api = {
     //获取用户金额
     getUserMoney:{url:'/api_user/{openId}',type:'get'},
     //回收单列表
-    getRecoverList:{url:'/api_order/{openId}/{page}',type:'get'}
+    getRecoverList:{url:'/api_order/{openId}/{page}',type:'get'},
+    //保修记录查询
+    getWarrantyList:{url:'/api_query/log/{openId}',type:'get'},
+    //查询imei
+    searchImei:{url:'/api_query/{openId}',type:'post'}
 };
 
 

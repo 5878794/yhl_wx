@@ -103,14 +103,12 @@ Page({
 			lv2:0
 		})
 	},
-	//TODO
 	showInfo(e){
 		let target = e.currentTarget.dataset,
 			data = target.data;
 
-		console.log(data)
-		sys.openUrl("../assessment/index")
-
+		let url = `../assessment/index?id=${data.id}&name=${data.name}&price=${data.price}`;
+		sys.openUrl(url);
 	}
 
 });

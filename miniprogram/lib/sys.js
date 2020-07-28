@@ -215,7 +215,6 @@ let sys = {
 			let query = wx.createSelectorQuery();
 			query.select(id).boundingClientRect();
 			query.exec(function (res) {
-				console.log('re '+JSON.stringify(res))
 				if(res[0]){
 					let backData = res[0] || {
 						top:0,
@@ -308,7 +307,6 @@ let sys = {
 						wx.getUserInfo({
 							success: function(res) {
 								let info = res.userInfo;
-								console.log(getApp().globalData)
 								if(app.globalData.openId && app.globalData.appId){
 									info.openId = app.globalData.openId;
 									info.appId = app.globalData.appId;

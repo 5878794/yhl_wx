@@ -2,55 +2,55 @@
 
 
 <view class="warranty_pp box_hlc box_lines">
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==0)? 'select' : ''}}" data-n="0" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item1" src="../../images/warranty_icon1.png"></image>
         </view>
         <view>苹果保修</view>
     </view>
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==1)? 'select' : ''}}" data-n="1" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item2" src="../../images/warranty_icon2.png"></image>
         </view>
         <view>苹果激活锁</view>
     </view>
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==2)? 'select' : ''}}" data-n="2" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item3" src="../../images/warranty_icon3.png"></image>
         </view>
         <view>苹果网络锁</view>
     </view>
-    <view class="warranty_pp_item box_scc border_right_no">
+    <view class="warranty_pp_item box_scc border_right_no {{(selected==3)? 'select' : ''}}" data-n="3" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item4" src="../../images/warranty_icon4.png"></image>
         </view>
         <view>三星保修</view>
     </view>
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==4)? 'select' : ''}}" data-n="4" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item5" src="../../images/warranty_icon5.png"></image>
         </view>
         <view>华为保修</view>
     </view>
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==5)? 'select' : ''}}" data-n="5" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item6" src="../../images/warranty_icon6.png"></image>
         </view>
         <view>OPPO保修</view>
     </view>
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==6)? 'select' : ''}}" data-n="6" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item7" src="../../images/warranty_icon7.png"></image>
         </view>
         <view>VIVO保修</view>
     </view>
-    <view class="warranty_pp_item box_scc border_right_no">
+    <view class="warranty_pp_item box_scc border_right_no {{(selected==7)? 'select' : ''}}" data-n="7" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item8" src="../../images/warranty_icon8.png"></image>
         </view>
         <view>小米保修</view>
     </view>
-    <view class="warranty_pp_item box_scc">
+    <view class="warranty_pp_item box_scc {{(selected==8)? 'select' : ''}}" data-n="8" bindtap="choose">
         <view class="box_hcc warranty_pp_item_image">
             <image class="warranty_pp_item8" src="../../images/warranty_icon8.png"></image>
         </view>
@@ -65,66 +65,47 @@
 <view class="title box_hlc">保修查询</view>
 <view class="search box_hlc">
     <image src="../../images/_search_input.png"></image>
-    <input type="text" class="boxflex1" placeholder-class="input_placeholder" placeholder="搜索：华为META 20"/>
+    <b-input id="imei" rule="must" type="text" class="boxflex1" placeholder-class="input_placeholder" placeholder="输入：imei号" err="请输入正确的imei号"></b-input>
 </view>
 
 <view style="width: 100%; height: 51rpx;"></view>
 
-<view class="btn box_hcc">查询（剩余3次）</view>
+<view class="btn box_hcc canActive" bindtap="search">查询（剩余3次）</view>
 
 
 <view class="title box_hlc">最近20条查询记录</view>
 
-<view class="warrant_search_item">
-    <view class="warrant_search_item_title box_hlc">
-        <view>IMEI:</view>
-        <text>1231231231231231</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">设备颜色</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">设备容量</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">网络型号</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">是否激活</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">电话支持</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-</view>
+<view id="scroll_to"></view>
 
-<view class="warrant_search_item">
-    <view class="warrant_search_item_title box_hlc">
-        <view>IMEI:</view>
-        <text>1231231231231231</text>
+<block wx:if="{{(list.length == 0)}}">
+    <view class="no_data box_hcc">暂无数据</view>
+</block>
+<block wx:for="{{list}}" wx:key="id">
+    <view class="warrant_search_item">
+        <view class="warrant_search_item_title box_hlc">
+            <view>IMEI:</view>
+            <text>{{item.imei}}</text>
+        </view>
+        <view class="box_hlc warrant_search_row">
+            <view class="warrant_search_item_name">设备颜色</view>
+            <text class="boxflex1 warrant_search_item_text">金色</text>
+        </view>
+        <view class="box_hlc warrant_search_row">
+            <view class="warrant_search_item_name">设备容量</view>
+            <text class="boxflex1 warrant_search_item_text">金色</text>
+        </view>
+        <view class="box_hlc warrant_search_row">
+            <view class="warrant_search_item_name">网络型号</view>
+            <text class="boxflex1 warrant_search_item_text">金色</text>
+        </view>
+        <view class="box_hlc warrant_search_row">
+            <view class="warrant_search_item_name">是否激活</view>
+            <text class="boxflex1 warrant_search_item_text">金色</text>
+        </view>
+        <view class="box_hlc warrant_search_row">
+            <view class="warrant_search_item_name">电话支持</view>
+            <text class="boxflex1 warrant_search_item_text">金色</text>
+        </view>
     </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">设备颜色</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">设备容量</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">网络型号</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">是否激活</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-    <view class="box_hlc warrant_search_row">
-        <view class="warrant_search_item_name">电话支持</view>
-        <text class="boxflex1 warrant_search_item_text">金色</text>
-    </view>
-</view>
+</block>
+

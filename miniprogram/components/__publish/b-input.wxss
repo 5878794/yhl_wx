@@ -88,5 +88,8 @@
 
 .placeholder_style{
     color: #ccc !important;
+    font-size:28rpx;
 }
+
+
 

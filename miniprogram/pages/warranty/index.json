@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "b-input": "../../components/b-input/b-input"
+  },
   "navigationBarTitleText": "保修查询"
 }

@@ -73,3 +73,8 @@
     text-align: right;
     padding-left:10rpx;
 }
+
+
+.warranty_pp .select{
+    background: #3edbfb;
+}

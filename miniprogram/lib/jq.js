@@ -80,7 +80,9 @@ class JQ{
 			if(checkFn(val,rule)){
 				success(val);
 			}else{
-				throw {msg:errMsg,id};
+				// throw {msg:errMsg,id};
+				console.log(errMsg)
+				throw errMsg;
 			}
 		});
 	}
