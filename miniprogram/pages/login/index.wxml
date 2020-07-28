@@ -1,0 +1,14 @@
+
+
+
+
+<view class="box_scc body">
+    <image class="logo" src="../../images/logo.png"></image>
+    <b-login-button class="login_btn" bindsuccess="loginSuccess">
+        <view class="box_hcc btn_body">
+            <image class="btn_icon" src="../../images/wechart_.png"></image>
+            <view>微信登录</view>
+        </view>
+    </b-login-button>
+    <view class="login_jg"></view>
+</view>

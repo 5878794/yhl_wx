@@ -4,7 +4,6 @@
 
 
 <view class="button_body">
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">
-        <slot></slot>
-    </button>
+    <button class="button" open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    <view class="button_main"><slot></slot></view>
 </view>

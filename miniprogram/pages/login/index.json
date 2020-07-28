@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "b-login-button": "../../components/b-login-button/b-login-button"
+  },
+  "navigationBarTitleText": "登录"
+}

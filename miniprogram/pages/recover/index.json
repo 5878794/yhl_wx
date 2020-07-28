@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "b-input": "../../components/b-input/b-input",
-    "b-image": "../../components/b-image/b-image"
+    "b-image": "../../components/b-image/b-image",
+    "b-a": "../../components/b-a/b-a"
   },
   "navigationBarTitleText": "批量回收"
 }

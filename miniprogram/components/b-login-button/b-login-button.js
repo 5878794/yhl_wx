@@ -19,6 +19,7 @@ Component({
 
     methods: {
 	    async getUserInfo(e){
+	    	sys.loading.show();
 		    let userInfo = e.detail.userInfo;
 
 		    let loginInfo = await server.login();
@@ -31,9 +32,10 @@ Component({
 
 		    sys.saveUserInfo(userInfo);
 
+		    sys.loading.hide();
 		    let myEventDetail = userInfo; // detail对象，提供给事件监听函数
 		    let myEventOption = {}; // 触发事件的选项
-		    this.triggerEvent('success', myEventDetail, myEventOption)
+		    this.triggerEvent('success', myEventDetail, myEventOption);
 	    }
     }
 });
