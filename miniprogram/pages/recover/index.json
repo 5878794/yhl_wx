@@ -2,5 +2,6 @@
   "usingComponents": {
     "b-input": "../../components/b-input/b-input",
     "b-image": "../../components/b-image/b-image"
-  }
+  },
+  "navigationBarTitleText": "批量回收"
 }
