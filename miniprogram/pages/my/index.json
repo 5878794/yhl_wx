@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "b-banner": "../../components/b-banner/b-banner"
+    "b-login-button": "../../components/b-login-button/b-login-button"
   },
   "navigationBarTitleText": "我的"
 }

@@ -3,12 +3,12 @@
 
 
 <view class="box_hcc my_title">
-    <image src="#"></image>
-    <view class="my_title_name boxflex1 diandian">大大东方</view>
+    <image src="{{userIcon}}"></image>
+    <view class="my_title_name boxflex1 diandian">{{nickname}}</view>
     <view class="box_scc btns">
         <view class="btn box_hcc">
             <view>余额</view>
-            <view class="my_money">580.00</view>
+            <view class="my_money">{{money}}</view>
         </view>
         <view class="wx_kf box_hcc">
             <button open-type="contact" class="wx_kf_btn" style="opacity:0;"></button>
@@ -24,38 +24,48 @@
     <view>我的回收单</view>
 </view>
 
-<view class="my_item box_slt">
-    <view class="my_item_body">
-        <view class="my_item_title box_hlc">
-            <view>订单号:</view>
-            <text>123123123123123123</text>
-            <!--        state1:待收货  state2:评估中  state3:已回收-->
-            <view class="state1 boxflex1">待收货</view>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">产品</view>
-            <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">发货时间</view>
-            <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
-        </view>
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">状态</view>
-            <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
-        </view>
-<!--        状态是已回收才会有金额-->
-        <view class="my_item_row box_hlc">
-            <view class="my_item_row_name">金额</view>
-            <text class="boxflex1 my_item_row_text">580.00</text>
-        </view>
-        <view class="my_item_row box_hlc" style="padding-right:0;">
-            <view class="my_item_row_name">复制订单信息</view>
-            <view class="boxflex1 my_item_row_text box_hrc">
-                <image class="copy" src="../../images/copy.png" data-copy="阿迪饭卡空间的饭卡上的卡就是看到飞机卡撒地方看见" bindtap="setClipboard"></image>
-                <!--                <image src="../../images/wechart.png"></image>-->
+
+<block wx:if="{{(list.length == 0)}}">
+    <view class="no_data box_hcc">暂无数据</view>
+</block>
+
+
+
+<!--TODO-->
+<block wx:for="{{list}}" wx:key="id">
+    <view class="my_item box_slt">
+        <view class="my_item_body">
+            <view class="my_item_title box_hlc">
+                <view>订单号:</view>
+                <text>{{item.wl_no}}</text>
+                <!--class更换变色    state1:待收货  state2:评估中  state3:已回收-->
+                <view class="state1 boxflex1">待收货</view>
+            </view>
+            <view class="my_item_row box_hlc">
+                <view class="my_item_row_name">产品</view>
+                <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
+            </view>
+            <view class="my_item_row box_hlc">
+                <view class="my_item_row_name">发货时间</view>
+                <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
+            </view>
+            <view class="my_item_row box_hlc">
+                <view class="my_item_row_name">状态</view>
+                <text class="boxflex1 my_item_row_text">ad附加按甲方发空间上飞机</text>
+            </view>
+            <!--        状态是已回收才会有金额-->
+            <view class="my_item_row box_hlc">
+                <view class="my_item_row_name">金额</view>
+                <text class="boxflex1 my_item_row_text">580.00</text>
+            </view>
+            <view class="my_item_row box_hlc" style="padding-right:0;">
+                <view class="my_item_row_name">复制订单信息</view>
+                <view class="boxflex1 my_item_row_text box_hrc">
+                    <image class="copy" src="../../images/copy.png" data-copy="阿迪饭卡空间的饭卡上的卡就是看到飞机卡撒地方看见" bindtap="setClipboard"></image>
+                    <!--                <image src="../../images/wechart.png"></image>-->
+                </view>
             </view>
         </view>
     </view>
-</view>
+</block>
 

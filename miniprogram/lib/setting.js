@@ -1,7 +1,7 @@
 
 
 let setting = {
-	serverUrl: 'https://www.jzfdata.com/business/'
+	serverUrl: 'http://81.68.114.127:11001'
 };
 
 
