@@ -10,13 +10,13 @@
 <scroll-view
         scroll-x="true"
         scroll-y="false"
-        scroll-into-view=""
+        scroll-into-view="{{scroll_id}}"
         scroll-with-animation="true"
         class="class_nav"
 >
     <view class="class_nav_body box_hlc">
         <block wx:for="{{list}}" wx:key="id">
-            <view class="class_nav_item {{(lv1==index)? 'select' : ''}}" data-n="{{index}}" bindtap="lv1Click">
+            <view id="scroll_{{index}}" class="class_nav_item {{(lv1==index)? 'select' : ''}}" data-n="{{index}}" bindtap="lv1Click">
                 <view class="class_nav_text">{{item.name}}</view>
                 <view class="class_nav_border"></view>
             </view>

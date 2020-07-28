@@ -9,18 +9,31 @@ import $ from '../../lib/jq.js';
 Page({
 	data: {
 		list:[],
+		scroll_id:'scroll_0',
 		lv1:0,
 		lv2:0
 	},
+	isReady:false,
+	async onLoad() {
+		let data = await this.getData();
+		this.handlerData(data);
 
-	onLoad: function() {
-
-		this.handlerData();
-
-
+		if(!this.isReady){
+			this.isReady = true;
+			this.onShow();
+		}
 
 	},
-	handlerData(){
+	async onShow(){
+		if(this.isReady){
+			let param = await sys.getTabParam(),
+				typeName = param.name;
+
+			this.scrollToType(typeName);
+			console.log(param)
+		}
+	},
+	getData(){
 		let data =[{"id":1,"name":"手机","level":0,"parent_id":0,"price":null},{"id":2,"name":"平板","level":0,"parent_id":0,"price":null},{"id":3,"name":"笔记本","level":0,"parent_id":0,"price":null},{"id":4,"name":"智能手表","level":0,"parent_id":0,"price":null},{"id":5,"name":"蓝牙耳机","level":0,"parent_id":0,"price":null},{"id":6,"name":"数码相机","level":0,"parent_id":0,"price":null},{"id":7,"name":"华为","level":1,"parent_id":1,"price":null},{"id":8,"name":"小米","level":1,"parent_id":1,"price":null},{"id":9,"name":"VIVO","level":1,"parent_id":1,"price":null},{"id":10,"name":"OPPO","level":1,"parent_id":1,"price":null},{"id":11,"name":"三星","level":1,"parent_id":1,"price":null},{"id":12,"name":"苹果 在保","level":1,"parent_id":1,"price":null},{"id":13,"name":"苹果 过保","level":1,"parent_id":1,"price":null},{"id":14,"name":"Meta 40 Pro","level":2,"parent_id":7,"price":3500},{"id":15,"name":"小米10 Pro","level":2,"parent_id":8,"price":3200},{"id":16,"name":"iPhone8 在保","level":2,"parent_id":12,"price":1000},{"id":17,"name":"iPhone8 过保","level":2,"parent_id":13,"price":800}];
 		data.push({"id":114,"name":"Meta1 40 Pro","level":2,"parent_id":7,"price":3500});
 		data.push({"id":115,"name":"Meta2 40 Pro","level":2,"parent_id":7,"price":3500});
@@ -31,7 +44,9 @@ Page({
 		data.push({"id":120,"name":"平板lv2","level":1,"parent_id":2,"price":3500});
 		data.push({"id":121,"name":"平板lv2--1","level":2,"parent_id":120,"price":3500});
 
-
+		return data;
+	},
+	handlerData(data){
 		let dataForKey = {},
 			backData = [];
 
@@ -56,6 +71,22 @@ Page({
 		});
 
 		console.log(data)
+	},
+	scrollToType(typeName){
+		let data = this.data.list,
+			n = 0;
+		data.map((rs,i)=>{
+			let name = rs.name;
+			if(name.indexOf(typeName) > -1){
+				n = i;
+			}
+		});
+
+		this.setData({
+			scroll_id:'scroll_'+n,
+			lv1:n
+		})
+
 	},
 	lv2Click(e){
 		let n = e.currentTarget.dataset.n;

@@ -31,7 +31,7 @@
     background: rgb(235,250,254);
     margin:0 15rpx 15rpx 0;
     padding:0 20rpx;
-    font-size:32rpx;
+    font-size:28rpx;
 }
 .index_item_icon{
     width: 80rpx; height: 100rpx;

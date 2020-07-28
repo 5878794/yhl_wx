@@ -14,64 +14,86 @@
 </b-banner>
 
 <view class="index_nav box_hcc">
-    <view class="index_nav_item box_sct">
-        <image src="../../images/1.png"></image>
-        <view>保修查询</view>
-    </view>
-    <view class="index_nav_item box_sct">
-        <image src="../../images/2.png"></image>
-        <view>手机回收</view>
-    </view>
-    <view class="index_nav_item box_sct">
-        <image src="../../images/3.png"></image>
-        <view>批量回收</view>
-    </view>
+    <b-a url="../warranty/index" type="tab">
+        <view class="index_nav_item box_sct">
+            <image src="../../images/1.png"></image>
+            <view>保修查询</view>
+        </view>
+    </b-a>
+    <b-a url="../classInfo/index" type="tab">
+        <view class="index_nav_item box_sct">
+            <image src="../../images/2.png"></image>
+            <view>手机回收</view>
+        </view>
+    </b-a>
+    <b-a url="../recover/index">
+        <view class="index_nav_item box_sct">
+            <image src="../../images/3.png"></image>
+            <view>批量回收</view>
+        </view>
+    </b-a>
 </view>
 
 
-<view class="btn box_hcc">免费评估</view>
+
+<b-a url="../classInfo/index" type="tab">
+    <view class="btn box_hcc">免费评估</view>
+</b-a>
+
 
 
 
 <!--回收类别-->
 <view class="title box_hlc">回收类别</view>
 <view class="box_hlt box_lines index_types">
-    <view class="index_item1 index_item box_hlc">
-        <view class="index_item_icon box_hcc">
-            <image src="../../images/_index_item1.png"></image>
+    <b-a url="../classInfo/index" localData="name=手机" type="tab">
+        <view class="index_item1 index_item box_hlc">
+            <view class="index_item_icon box_hcc">
+                <image src="../../images/_index_item1.png"></image>
+            </view>
+            <view class="boxflex1 box_hcc">手机</view>
         </view>
-        <view class="boxflex1 box_hcc">手机</view>
-    </view>
-    <view class="index_item2 index_item box_hlc">
-        <view class="index_item_icon box_hcc">
-            <image src="../../images/_index_item2.png"></image>
+    </b-a>
+    <b-a url="../classInfo/index" localData="name=平板" type="tab">
+        <view class="index_item2 index_item box_hlc">
+            <view class="index_item_icon box_hcc">
+                <image src="../../images/_index_item2.png"></image>
+            </view>
+            <view class="boxflex1 box_hcc">平板</view>
         </view>
-        <view class="boxflex1 box_hcc">平板</view>
-    </view>
-    <view class="index_item3 index_item box_hlc index_item_padding_left_no">
-        <view class="index_item_icon box_hcc">
-            <image src="../../images/_index_item3.png"></image>
+    </b-a>
+    <b-a url="../classInfo/index" localData="name=手表" type="tab">
+        <view class="index_item3 index_item box_hlc index_item_padding_left_no">
+            <view class="index_item_icon box_hcc">
+                <image src="../../images/_index_item3.png"></image>
+            </view>
+            <view class="boxflex1 box_hcc">智能手表</view>
         </view>
-        <view class="boxflex1 box_hcc">智能手表</view>
-    </view>
-    <view class="index_item4 index_item box_hlc">
-        <view class="index_item_icon box_hcc">
-            <image src="../../images/_index_item4.png"></image>
+    </b-a>
+    <b-a url="../classInfo/index" localData="name=笔记本" type="tab">
+        <view class="index_item4 index_item box_hlc">
+            <view class="index_item_icon box_hcc">
+                <image src="../../images/_index_item4.png"></image>
+            </view>
+            <view class="boxflex1 box_hcc">笔记本</view>
         </view>
-        <view class="boxflex1 box_hcc">笔记本</view>
-    </view>
-    <view class="index_item5 index_item box_hlc">
-        <view class="index_item_icon box_hcc">
-            <image src="../../images/_index_item5.png"></image>
+    </b-a>
+    <b-a url="../classInfo/index" localData="name=相机" type="tab">
+        <view class="index_item5 index_item box_hlc">
+            <view class="index_item_icon box_hcc">
+                <image src="../../images/_index_item5.png"></image>
+            </view>
+            <view class="boxflex1 box_hcc">相机</view>
         </view>
-        <view class="boxflex1 box_hcc">相机</view>
-    </view>
-    <view class="index_item6 index_item box_hlc index_item_padding_left_no">
-        <view class="index_item_icon box_hcc">
-            <image src="../../images/_index_item6.png"></image>
+    </b-a>
+    <b-a url="../classInfo/index" localData="name=耳机" type="tab">
+        <view class="index_item6 index_item box_hlc index_item_padding_left_no">
+            <view class="index_item_icon box_hcc">
+                <image src="../../images/_index_item6.png"></image>
+            </view>
+            <view class="boxflex1 box_hcc">蓝牙耳机</view>
         </view>
-        <view class="boxflex1 box_hcc">蓝牙耳机</view>
-    </view>
+    </b-a>
 </view>
 
 

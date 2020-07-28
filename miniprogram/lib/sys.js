@@ -269,6 +269,23 @@ let sys = {
 			})
 		})
 
+	},
+
+
+	//tab页面传参用
+	// text:    name=123&a=222
+	async setTabParam(text){
+		await this.setLocalData('__temp_tab_param__',text);
+	},
+	async getTabParam(){
+		let text = await this.getLocalData('__temp_tab_param__');
+		text = text.split('&');
+		let backData = {};
+		text.map(rs=>{
+			let item = rs.split('=');
+			backData[item[0]] = item[1];
+		});
+		return backData;
 	}
 };
 
