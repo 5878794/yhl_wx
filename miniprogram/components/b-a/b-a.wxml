@@ -1,0 +1,6 @@
+
+
+
+<view class="view_a" data-url="{{url}}" data-type="{{type}}" bindtap="onclick">
+    <slot></slot>
+</view>

@@ -1,10 +1,12 @@
 <!--首页-->
 
+<b-a url="../search/index">
+    <view class="search box_hlc">
+        <image src="../../images/_search_input.png"></image>
+        <view class="boxflex1">搜索：华为META 20</view>
+    </view>
+</b-a>
 
-<view class="search box_hlc">
-    <image src="../../images/_search_input.png"></image>
-    <view class="boxflex1">搜索：华为META 20</view>
-</view>
 <b-banner
         class="banner"
         indicatorDots="{{false}}"

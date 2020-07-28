@@ -1,20 +1,13 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/classInfo/index",
         "pages/assessment/index",
         "pages/recover/index",
-
         "pages/my/index",
         "pages/search/index",
         "pages/order/index",
-        "pages/warranty/index",
-
-        "pages/index/index"
-
-
-
-
-
+        "pages/warranty/index"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

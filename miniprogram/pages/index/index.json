@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "b-banner": "../../components/b-banner/b-banner"
+    "b-banner": "../../components/b-banner/b-banner",
+    "b-a": "../../components/b-a/b-a"
   },
   "navigationBarTitleText": "驿站回收"
 }
