@@ -21,7 +21,10 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"bundle": true
+		"bundle": true,
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx9ec70a82ebd8ef44",
 	"projectname": "wxTest",

@@ -48,13 +48,16 @@
 
 
 
-
+<view class="bottom_nav_"></view>
 <view class="bottom_nav box_hlc" style="background: #fff;">
     <view class="bottom_nav_icon canActive box_scc">
         <image src="../../images/nav1_.png"></image>
         <view>首页</view>
     </view>
-    <view class="bottom_nav_btn1 boxflex1 canActive box_hcc">联系客服</view>
+    <view class="bottom_nav_btn1 boxflex1 canActive box_hcc">
+        <button open-type="contact" style="opacity:0;"></button>
+        <view>联系客服</view>
+    </view>
     <view class="bottom_nav_btn2 boxflex1 canActive box_hcc">邮寄下单</view>
 </view>
 
