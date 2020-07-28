@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "b-a": "../../components/b-a/b-a"
+  },
   "navigationBarTitleText": "类目"
 }

@@ -1,10 +1,11 @@
 <!--类目页面-->
 
-
-<view class="search box_hlc">
-    <image src="../../images/_search_input.png"></image>
-    <view class="boxflex1">搜索：华为META 20</view>
-</view>
+<b-a url="../search/index">
+    <view class="search box_hlc">
+        <image src="../../images/_search_input.png"></image>
+        <view class="boxflex1">搜索：华为META 20</view>
+    </view>
+</b-a>
 
 
 <scroll-view
@@ -34,7 +35,7 @@
     <view class="box_slt class_info_body_right boxflex1">
 <!--        fa4e18,8cffc8,a985fe-->
         <block wx:for="{{list[lv1].children[lv2].children}}" wx:key="id">
-            <view class="class_lv3_item box_hlc">
+            <view class="class_lv3_item box_hlc" data-data="{{item}}" bindtap="showInfo">
                 <view class="class_lv3_no" style="background-color: {{(index==0)? '#fa4e18' : (index==1)? '#8cffc8' : (index==2)? '#a985fe' : '#cdcecf'}};">{{index+1}}</view>
                 <view class="boxflex1 diandian">{{item.name}}</view>
             </view>
