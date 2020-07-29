@@ -10,7 +10,7 @@
             <view class="local_history_item" bindtap="searchClick" data-data="{{item}}">{{item.name}}</view>
         </block>
     </view>
-    <view class="online_search">
+    <view class="online_search {{(searchList.length==0)? 'hidden':''}}">
         <block wx:for="{{searchList}}" wx:key="id">
             <view class="online_search_item diandian" bindtap="searchClick" data-data="{{item}}">{{item.name}}</view>
         </block>
