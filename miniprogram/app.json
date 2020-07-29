@@ -1,14 +1,16 @@
 {
     "pages": [
+        "pages/search/index",
+        "pages/index/index",
         "pages/warranty/index",
         "pages/my/index",
 
         "pages/classInfo/index",
-        "pages/index/index",
+
         "pages/assessment/index",
         "pages/recover/index",
 
-        "pages/search/index",
+
         "pages/order/index",
         "pages/login/index"
 

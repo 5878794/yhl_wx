@@ -13,7 +13,20 @@ var a = {
 	},
 
 	onLoad: function() {
+		sys.loading.show();
+		this.init().then(rs=>{
+			sys.loading.hide();
+		}).catch(e=>{
+			sys.loading.hide();
+			sys.alert(e);
+		})
+	},
+	async init(){
+		let [product] = await ajax.send([
+			api.getProducts()
+		]);
 
+		await sys.setLocalData('product',product);
 	}
 
 };

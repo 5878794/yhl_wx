@@ -43,6 +43,11 @@ Page({
 		}
 	},
 	async getData(){
+		let products = await sys.getLocalData('product');
+		if(products){
+			return products;
+		}
+
 		let [data] = await ajax.send([
 			api.getProducts()
 		]);
