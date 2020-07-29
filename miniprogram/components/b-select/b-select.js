@@ -16,31 +16,40 @@ Component({
 
     },
 
+	observers: {
+		'selectData': function (params) {//  'params'是要监听的字段，（params）是已更新变化后的数据
+			this.init(params);
+		}
+	},
+
 	attached(){
-		//处理select
-		let data = this.data.selectData,
-			newData = [],
-			newKey = [],
-			selected = this.data.value,
-			selectIndex = 0;
-		data.map((rs,i)=>{
-			if(rs.key == selected){
-				selectIndex = i;
-			}
-			newData.push(rs.value);
-			newKey.push(rs.key);
-		});
-		this.setData({
-			selectValue:newData,
-			selectKey:newKey,
-			selectIndex:selectIndex,
-			value:selected
-		});
+		this.init(this.data.selectData);
 
 	},
 
 
 	methods: {
+		init(data){
+			//处理select
+			let newData = [],
+				newKey = [],
+				selected = this.data.value,
+				selectIndex = 0;
+			data.map((rs,i)=>{
+				if(rs.key == selected){
+					selectIndex = i;
+				}
+				newData.push(rs.value);
+				newKey.push(rs.key);
+			});
+			this.setData({
+				selectValue:newData,
+				selectKey:newKey,
+				selectIndex:selectIndex,
+				value:selected
+			});
+		},
+
 		onSelect(e){
 
 			this.setData({

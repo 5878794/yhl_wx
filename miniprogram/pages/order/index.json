@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "b-input": "../../components/b-input/b-input",
+    "b-select": "../../components/b-select/b-select",
     "b-scan": "../../components/b-scan/b-scan"
   },
   "navigationBarTitleText": "下单"

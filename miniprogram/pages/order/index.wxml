@@ -3,10 +3,10 @@
 <view class="title box_hlc">发货信息</view>
 
 <view class="order_input_body">
-    <b-input class="order_input box_hcc" type="text" name="物流公司" rule="must" err="请输入物流公司名称" placeholder="请输入物流公司名称" id="company"></b-input>
+    <b-select class="order_input box_hcc" selectData="{{mailData}}" type="select" name="物流公司" err="请输入物流公司名称" placeholder="请选择物流公司" id="company"></b-select>
     <b-scan clickIcon="../../images/scan.png" nowBtnStyle="width:25rpx;height:26rpx;" class="order_input box_hcc" type="text" name="物流单号" rule="must" err="请输入物流订单号或扫描条码" placeholder="请输入物流订单号或扫描条码" id="ordierId"></b-scan>
     <b-input class="order_input box_hcc" type="number" name="手机号码" rule="must,phone" err="请输入正确的11位手机号码" placeholder="请输入手机号码" id="phone"></b-input>
-    <b-input class="order_input box_hcc" type="text" name="备注" rule="" err="请输入手机号码" placeholder="发货备注（选填）" id="bz"></b-input>
+    <b-input class="order_input box_hcc" type="text" name="备注"  err="请输入手机号码" placeholder="发货备注（选填）" id="bz"></b-input>
 
     <view class="btn box_hcc canActive" bindtap="submit">提交</view>
     <view class="input_info box_hcc">邮寄流程: 邮寄发货 -> 拆包检测 -> 精准估价 -> 收款码付款</view>
