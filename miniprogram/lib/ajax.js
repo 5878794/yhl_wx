@@ -56,7 +56,9 @@ let api = {
     //保修记录查询
     getWarrantyList:{url:'/api_query/log/{openId}',type:'get'},
     //查询imei
-    searchImei:{url:'/api_query/{openId}',type:'post'}
+    searchImei:{url:'/api_query/{openId}',type:'post'},
+    //获取评估时 产品的分类属性
+    getProductParam:{url:'/api_price/{productId}',type:'get'}
 };
 
 

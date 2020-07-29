@@ -3,55 +3,37 @@
 <view class="pg_body box_sct">
     <image mode="widthFix" src="../../images/pg_bg.png"></image>
     <view class="pg_title">评估</view>
-    <view class="pg_info">阿福卡点击发送金风科技affect</view>
+    <view class="pg_info">{{productName}}</view>
     <view class="pg_btn box_hcc {{(hidden)? 'hidden' : ''}}">
         <block wx:if="{{hasLogin}}">
-            <view>￥ 1500</view>
+            <view>￥ {{productPrice}}</view>
         </block>
         <block wx:else>
-            <b-login-button bindsuccess="getUserInfoSuccess">
-                <view>微信登录</view>
+            <b-login-button class="login_btn" bindsuccess="getUserInfoSuccess">
+                <view class="box_hcc login_btn_text">微信登录</view>
             </b-login-button>
         </block>
     </view>
 </view>
 
-<view class="pg_item_body">
-    <view class="pg_item_title">
-        <view class="pg_item_title_no">
-            <view>1</view>
+
+
+<block wx:for="{{params}}" wx:key="index" wx:for-index="i">
+    <view class="pg_item_body">
+        <view class="pg_item_title">
+            <view class="pg_item_title_no">
+                <view>{{i+1}}</view>
+            </view>
+            <view class="pg_item_title_name">{{item[0].group_name}}</view>
         </view>
-        <view class="pg_item_title_name">存储</view>
+
+        <block wx:for="{{item}}" wx:key="tag_id">
+            <view bindtap="paramSelectFn" data-data="{{item}}" data-group="{{i}}" data-index="{{index}}" class="pg_item {{(paramSelected[i] == index)? 'select': ''}}" data-data="{{item}}">{{item.tag_name}}</view>
+        </block>
     </view>
-    <view class="pg_item">64G</view>
-    <view class="pg_item select">点击发电机房</view>
-    <view class="pg_item">点击发电机房</view>
-    <view class="pg_item">点击发电机房</view>
-</view>
-<view class="pg_item_body">
-    <view class="pg_item_title">
-        <view class="pg_item_title_no">
-            <view>1</view>
-        </view>
-        <view class="pg_item_title_name">存储</view>
-    </view>
-    <view class="pg_item">64G</view>
-    <view class="pg_item select">点击发电机房</view>
-    <view class="pg_item">点击发电机房</view>
-    <view class="pg_item">点击发电机房</view>
-</view>
-<view class="pg_item_body">
-    <view class="pg_item_title">
-        <view class="pg_item_title_no">
-            <view>1</view>
-        </view>
-        <view class="pg_item_title_name">存储</view>
-    </view>
-    <view class="pg_item">64G</view>
-    <view class="pg_item select">点击发电机房</view>
-    <view class="pg_item">点击发电机房</view>
-    <view class="pg_item">点击发电机房</view>
-</view>
+</block>
+
+
 
 
 
@@ -69,9 +51,9 @@
         <button open-type="contact" style="opacity:0;"></button>
         <view>联系客服</view>
     </view>
-    <b-a url="../order/index" class="bottom_nav_btn2 boxflex1 canActive box_hcc">
+    <view class="bottom_nav_btn2 boxflex1 canActive box_hcc" bindtap="submit">
         <view>邮寄下单</view>
-    </b-a>
+    </view>
 </view>
 
 

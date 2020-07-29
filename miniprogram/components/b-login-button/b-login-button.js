@@ -22,6 +22,12 @@ Component({
 	    	sys.loading.show();
 		    let userInfo = e.detail.userInfo;
 
+		    if(!userInfo){
+		    	sys.loading.hide();
+		    	sys.info.show('用户未授权！');
+		    	return;
+		    }
+
 		    let loginInfo = await server.login();
 		    loginInfo = loginInfo.event.userInfo;
 

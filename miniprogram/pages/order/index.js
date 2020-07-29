@@ -25,8 +25,8 @@ Page({
 		]
 	},
 
-	onLoad: function() {
-
+	onLoad: function(e) {
+		console.log(e)
 
 
 
