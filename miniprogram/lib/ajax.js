@@ -58,7 +58,15 @@ let api = {
     //查询imei
     searchImei:{url:'/api_query/{openId}',type:'post'},
     //获取评估时 产品的分类属性
-    getProductParam:{url:'/api_price/{productId}',type:'get'}
+    getProductParam:{url:'/api_price/{productId}',type:'get'},
+    //物流公司列表
+    getMailCompany:{url:'/api_wuliu',type:'get'},
+    //提交订单
+    //单个：
+    //body:{order_type:订单类型,model_info:型号ID,subobj:选中标签集合,wl_cid:物流公司ID,wl_no:物流单号,tel:联系电话[,remake:备注]}
+    //多个：
+    //body:{order_type:订单类型,model_info:数量,subobj:图片地址或token集合,wl_cid:物流公司ID,wl_no:物流单号,tel:联系电话[,remake:备注]}
+    submitOrder:{url:'/api_order/{openId}',type:'post'}
 };
 
 
