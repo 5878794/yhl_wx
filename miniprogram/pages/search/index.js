@@ -33,7 +33,7 @@ Page({
 		//只需要level2的数据
 		let backData = [];
 		data.map(rs=>{
-			if(rs.level == 2){
+			if(rs.level == 2 || rs.level == 1){
 				backData.push(rs);
 			}
 		})
@@ -71,14 +71,33 @@ Page({
 	getList(val){
 		val = val.toLowerCase();
 		let data = this.listData,
-			backData = [];
+			backData = [],
+			tempPP = [];
 
 		data.map(rs=>{
 			let name = rs.name.toLowerCase();
 			if(name.indexOf(val) > -1){
-				backData.push(rs)
+				if(rs.level == 2){
+					backData.push(rs)
+				}else if(rs.level == 1){
+					tempPP.push(rs);
+				}
 			}
 		});
+
+
+		//获取选择的品牌
+		let tempPPId = [];
+		tempPP.map(rs=>{tempPPId.push(rs.id)});
+
+		//获取品牌下的数据
+		data.map(rs=>{
+			let now_id = rs.parent_id;
+			if(tempPPId.indexOf(now_id)>-1){
+				backData.push(rs);
+			}
+		})
+
 
 		return backData;
 	},
