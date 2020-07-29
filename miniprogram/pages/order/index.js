@@ -122,7 +122,7 @@ Page({
 			// remake:备注
 			submitData = {
 				openId:userInfo.openId,
-				order_type:1,
+				order_type:2,
 				model_info:this.productNumber,
 				subobj:this.imgSrc,
 				wl_cid:name,

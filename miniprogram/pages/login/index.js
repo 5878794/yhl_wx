@@ -16,7 +16,7 @@ Page({
 
 	},
 	loginSuccess(e){
-		console.log(e)
+		sys.goBack();
 	}
 
 });

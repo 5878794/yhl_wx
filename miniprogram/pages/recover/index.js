@@ -1,7 +1,7 @@
 //index.js
 const app = getApp();
 // import server from '../../lib/server.js';
-// import {ajax,api} from '../../lib/ajax.js';
+import {ajax,api} from '../../lib/ajax.js';
 import sys from '../../lib/sys.js';
 import $ from '../../lib/jq.js';
 
@@ -16,19 +16,30 @@ Page({
 		let userInfo = await sys.getUserInfo();
 		sys.loading.hide();
 		if(!userInfo){
-			console.log(123)
-			// sys.openUrl();
+			sys.openUrl('../login/index');
 		}
 
 	},
 	submit(){
-		this.submitFn().then().catch(e=>{sys.alert(e.msg)});
+		sys.loading.show();
+		this.submitFn().then(rs=>{
+			sys.loading.hide();
+		}).catch(e=>{
+			sys.loading.hide();
+			sys.alert(e)
+		});
 	},
 	async submitFn(){
 		let number = await $('#number').check(),
 			image = await $('#image').check();
 
-		console.log(number,image)
+		console.log(number,image);
+		//image = await sys.uploadFile('/upload',image);
+
+
+
+		let url = `../order/index?productNumber=${number}&imgSrc=${image}&type=2`;
+		sys.openUrl(url);
 	}
 
 });

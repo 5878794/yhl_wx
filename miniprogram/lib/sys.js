@@ -1,6 +1,6 @@
 
 import server from "./server";
-
+import setting from './setting';
 
 
 
@@ -333,6 +333,31 @@ let sys = {
 				}
 			})
 		});
+	},
+	//文件上传
+	//serverUrl 服务器地址
+	//filePath  本地文件路径
+	//data      其它form表单
+	//name      file文件对应的key
+	//header    其它header内的对象
+	uploadFile(api,filePath,data,name,header){
+		return new Promise((success,error)=>{
+			wx.uploadFile({
+				url: setting.serverUrl+api,
+				filePath: filePath,
+				name: name || 'file',
+				formData: data,
+				header:header,
+				timeout:20000,
+				success (res){
+					const data = res.data
+					success(data);
+				},
+				fail(e){
+					error(e);
+				}
+			})
+		})
 	}
 };
 
