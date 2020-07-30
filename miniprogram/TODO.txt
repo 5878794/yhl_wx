@@ -1,5 +1,4 @@
 
-保修查询20条   warranty/index.html
 保修查询次数限制   warranty/index.js
 充值页面      无
 

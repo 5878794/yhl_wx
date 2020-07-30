@@ -78,3 +78,10 @@
 .warranty_pp .select{
     background: #3edbfb;
 }
+
+
+.search_btn_info{
+    font-size: 24rpx; color: #ccc;
+    padding:10rpx 0; text-align: center;
+    width: 100%;
+}

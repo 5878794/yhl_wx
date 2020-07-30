@@ -34,6 +34,9 @@ Page({
 			api.getWarrantyList({openId:userInfo.openId})
 		]);
 
+		list = [{"typeid":2,"imei":"imei","datetimes":"2020-07-28 15:02","val":[{"key":"sn","val":"354434065184270"},{"key":"model","val":"iPhone 6"},{"key":"icloud","val":"Lost"},{"key":"locked","val":"true"}]},{"typeid":1,"imei":"imei","datetimes":"2020-07-27 15:02","val":[{"key":"sn","val":"354434065184270"},{"key":"model","val":"iPhone 6"},{"key":"icloud","val":"Lost"},{"key":"locked","val":"true"}]}];
+		console.log(list)
+
 		this.setData({
 			list:list
 		})
@@ -99,6 +102,9 @@ Page({
 		this.setData({
 			list:oldData
 		});
+
+		$('#imei').val('');
+		sys.info.show('查询成功！');
 
 		//滚动到第一条数据的地方
 		let obj = await sys.getDomParam('#scroll_to'),

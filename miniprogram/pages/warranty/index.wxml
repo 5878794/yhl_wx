@@ -71,6 +71,7 @@
 <view style="width: 100%; height: 51rpx;"></view>
 
 <view class="btn box_hcc canActive" bindtap="search">查询（剩余3次）</view>
+<view class="search_btn_info">注：每个用户前3次查询免费，以后每次查询 0.5元/次</view>
 
 
 <view class="title box_hlc">最近20条查询记录</view>
@@ -86,26 +87,12 @@
             <view>IMEI:</view>
             <text>{{item.imei}}</text>
         </view>
-        <view class="box_hlc warrant_search_row">
-            <view class="warrant_search_item_name">设备颜色</view>
-            <text class="boxflex1 warrant_search_item_text">金色</text>
-        </view>
-        <view class="box_hlc warrant_search_row">
-            <view class="warrant_search_item_name">设备容量</view>
-            <text class="boxflex1 warrant_search_item_text">金色</text>
-        </view>
-        <view class="box_hlc warrant_search_row">
-            <view class="warrant_search_item_name">网络型号</view>
-            <text class="boxflex1 warrant_search_item_text">金色</text>
-        </view>
-        <view class="box_hlc warrant_search_row">
-            <view class="warrant_search_item_name">是否激活</view>
-            <text class="boxflex1 warrant_search_item_text">金色</text>
-        </view>
-        <view class="box_hlc warrant_search_row">
-            <view class="warrant_search_item_name">电话支持</view>
-            <text class="boxflex1 warrant_search_item_text">金色</text>
-        </view>
+        <block wx:for="{{item.val}}" wx:key="index">
+            <view class="box_hlc warrant_search_row">
+                <view class="warrant_search_item_name">{{item.key}}</view>
+                <text class="boxflex1 warrant_search_item_text">{{item.val}}</text>
+            </view>
+        </block>
     </view>
 </block>
 
