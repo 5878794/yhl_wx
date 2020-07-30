@@ -43,6 +43,26 @@ var a = {
 		user = user[0] || {};
 
 		this.openId = userInfo.openId;
+
+
+		list.map(rs=>{
+			//状态字符的class
+			let state = rs.order_state,
+				_class = (state.indexOf('评')>-1)? 'state1' :
+						(state.indexOf('已')>-1)? 'state2' : 'state3';
+			rs.class = _class;
+
+			//拷贝按钮需要的文字
+			let text = [];
+			text.push('订单编号:'+rs.id);
+			text.push('订单状态:'+rs.order_state);
+			rs.list.map(list=>{
+				text.push(list.key+':'+list.val);
+			});
+			text = text.join(';\r\n');
+			rs.copy = text;
+		});
+
 		this.setData({
 			userIcon:userInfo.avatarUrl,
 			nickname:userInfo.nickName,
