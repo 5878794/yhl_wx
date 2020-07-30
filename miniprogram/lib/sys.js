@@ -353,6 +353,7 @@ let sys = {
 				header:header,
 				timeout:20000,
 				success (res){
+					console.log(res)
 					let data = res.data
 					data = JSON.parse(data);
 
@@ -361,7 +362,7 @@ let sys = {
 						return;
 					}
 
-					success(data.downUrl);
+					success(data);
 				},
 				fail(e){
 					error(e);

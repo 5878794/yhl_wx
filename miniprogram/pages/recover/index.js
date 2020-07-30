@@ -35,7 +35,8 @@ Page({
 
 		// console.log(number,image);
 		image = await sys.uploadFile('/api_upload/upload',image);
-
+		image  = image[0];
+		// console.log(image)
 		// console.log(image);
 
 		let url = `../order/index?productNumber=${number}&imgSrc=${image}&type=2`;
