@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/pay/index",
         "pages/search/index",
         "pages/warranty/index",
         "pages/my/index",

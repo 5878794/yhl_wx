@@ -53,19 +53,14 @@ Page({
 	},
 	search(){
 		//判断是否可以点击
-		if(true){
-			sys.loading.show();
-			this.searchFn().then(rs=>{
-				sys.loading.hide();
-			}).catch(e=>{
-				sys.loading.hide();
-				sys.alert(e);
-			})
-		}else{
-			sys.info.alert('请充值');
-			//页面跳转
-			// sys.openUrl('');
-		}
+		sys.loading.show();
+		this.searchFn().then(rs=>{
+			sys.loading.hide();
+		}).catch(e=>{
+			sys.loading.hide();
+			sys.alert(e);
+		})
+
 
 	},
 	async searchFn(){
@@ -84,14 +79,26 @@ Page({
 
 		let [rs] = await ajax.send([
 			api.searchImei({
+				// openId:123,
 				openId:this.openId,
 				typeid:n,
 				imei:imei
 			})
 		]);
 
+
+		//没钱
+		if(rs.state == -1){
+			sys.loading.hide();
+			await sys.confirm('免费查询次数已用完或未充值，是否现在充值');
+			$('#imei').val('');
+			sys.openUrl('../pay/index');
+			return;
+		}
+
+
 		//判断数据
-		if(!rs){
+		if(!rs.val){
 			sys.info.show('未查询到数据');
 			return;
 		}
