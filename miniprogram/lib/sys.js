@@ -341,17 +341,27 @@ let sys = {
 	//name      file文件对应的key
 	//header    其它header内的对象
 	uploadFile(api,filePath,data,name,header){
+		name = name || 'file';
+		data = data || {};
+		header = header || {};
 		return new Promise((success,error)=>{
 			wx.uploadFile({
 				url: setting.serverUrl+api,
 				filePath: filePath,
-				name: name || 'file',
+				name: name,
 				formData: data,
 				header:header,
 				timeout:20000,
 				success (res){
-					const data = res.data
-					success(data);
+					let data = res.data
+					data = JSON.parse(data);
+
+					if(data.err){
+						error(data.info);
+						return;
+					}
+
+					success(data.downUrl);
 				},
 				fail(e){
 					error(e);

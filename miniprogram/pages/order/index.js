@@ -31,7 +31,6 @@ Page({
 	imgSrc:'',
 	productNumber:0,
 	onLoad: function(e) {
-		console.log(e)
 		let type = e.type;
 		if(type==1){
 			this.type = 1;

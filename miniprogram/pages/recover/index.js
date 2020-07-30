@@ -33,10 +33,10 @@ Page({
 		let number = await $('#number').check(),
 			image = await $('#image').check();
 
-		console.log(number,image);
-		//image = await sys.uploadFile('/upload',image);
+		// console.log(number,image);
+		image = await sys.uploadFile('/api_upload/upload',image);
 
-
+		// console.log(image);
 
 		let url = `../order/index?productNumber=${number}&imgSrc=${image}&type=2`;
 		sys.openUrl(url);
