@@ -14,7 +14,8 @@ Page({
 		lv2:0
 	},
 	isReady:false,
-	onLoad() {
+	onShow() {
+		this.isReady = false;
 		sys.loading.show();
 		this.init().then(rs=>{
 			sys.loading.hide();
@@ -31,13 +32,14 @@ Page({
 
 		if(!this.isReady){
 			this.isReady = true;
-			this.onShow();
+			this.onShows();
 		}
 	},
-	async onShow(){
+	async onShows(){
 		if(this.isReady){
 			let param = await sys.getTabParam(),
 				typeName = param.name;
+			console.log(typeName)
 
 			this.scrollToType(typeName);
 		}

@@ -36,7 +36,7 @@ Component({
 		    }
 
 
-		    sys.saveUserInfo(userInfo);
+		    await sys.saveUserInfo(userInfo);
 
 		    sys.loading.hide();
 		    let myEventDetail = userInfo; // detail对象，提供给事件监听函数

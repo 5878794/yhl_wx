@@ -1,6 +1,7 @@
 
 import server from "./server";
 import setting from './setting';
+import {ajax, api} from "./ajax";
 
 
 
@@ -291,15 +292,58 @@ let sys = {
 		return backData;
 	},
 	//保存用户信息及openid等
+	//带服务器信息保存。。。。
 	saveUserInfo(info){
-		const app = getApp();
-		app.globalData.openId = info.openId;
-		app.globalData.appId = info.appId;
+		let _this = this;
+		return new Promise(success=>{
+			const app = getApp();
+			app.globalData.openId = info.openId;
+			app.globalData.appId = info.appId;
+
+			ajax.send([
+				api.register({
+					openid:info.openId,
+					nick:info.nickName,
+					headurl:info.avatarUrl
+				})
+			]).then(async rs=>{
+				await _this.setLocalData('register',true);
+				success();
+			}).catch(async e=>{
+				sys.loading.hide();
+				await _this.setLocalData('register',false);
+				await _this.alert(e);
+				success();
+			});
+		})
 	},
 	//获取用户信息
+	//带服务器信息保存。。。。
 	getUserInfo(){
-		const app = getApp();
+		const app = getApp(),
+			_this = this;
 		return new Promise(success=>{
+			let allSuccess = async function(info){
+				let isRegister = await _this.getLocalData('register');
+				if(isRegister){
+					success(info);
+					return;
+				}
+				ajax.send([
+					api.register({
+						openid:info.openId,
+						nick:info.nickName,
+						headurl:info.avatarUrl
+					})
+				]).then(async rs=>{
+					await _this.setLocalData('register',true);
+					success(info);
+				}).catch(async e=>{
+					await _this.setLocalData('register',false);
+					success(info);
+				});
+			};
+
 			wx.getSetting({
 				success (res){
 					if (res.authSetting['scope.userInfo']) {
@@ -310,7 +354,7 @@ let sys = {
 								if(app.globalData.openId && app.globalData.appId){
 									info.openId = app.globalData.openId;
 									info.appId = app.globalData.appId;
-									success(info);
+									allSuccess(info);
 								}else{
 									server.login().then(rs=>{
 										let loginInfo = rs.event.userInfo;
@@ -319,7 +363,7 @@ let sys = {
 										//缓存
 										app.globalData.openId = info.openId;
 										app.globalData.appId = info.appId;
-										success(info);
+										allSuccess(info);
 									}).catch(e=>{
 										sys.alert(e);
 									});

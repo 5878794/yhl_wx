@@ -14,7 +14,7 @@ var a = {
 	openId:null,
 	nowPage:0,
 	hasData:true,
-	onLoad() {
+	onShow() {
 		sys.loading.show();
 		this.init().then(rs=>{
 			sys.loading.hide();
@@ -40,7 +40,8 @@ var a = {
 				openId:userInfo.openId
 			})
 		]);
-		user = user[0] || {};
+		user = user || {};
+		console.log(user)
 
 		this.openId = userInfo.openId;
 
@@ -66,7 +67,7 @@ var a = {
 		this.setData({
 			userIcon:userInfo.avatarUrl,
 			nickname:userInfo.nickName,
-			money:user.available_balance || 0,
+			money:user.balance || 0,
 			list:list
 		});
 
