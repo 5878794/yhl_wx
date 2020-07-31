@@ -9,9 +9,17 @@ app.globalData.$ = $;
 
 var a = {
 	data: {
-
+		pay:[
+			{id:1,val:0.01},
+			{id:2,val:0.01},
+			{id:3,val:0.01},
+			{id:4,val:0.02}
+		],
+		selectNo:0,
+		userIcon:'',
+		nickname:''
 	},
-
+	userInfo:null,
 	onLoad: function() {
 		sys.loading.show();
 		this.init().then(rs=>{
@@ -22,7 +30,26 @@ var a = {
 		})
 	},
 	async init(){
+		let userInfo = await sys.getUserInfo();
+		this.setData({
+			userIcon:userInfo.avatarUrl,
+			nickname:userInfo.nickName
+		});
+		this.userInfo = userInfo;
+	},
+	select(e){
+		let data = e.currentTarget.dataset,
+			index = data.index;
 
+		this.setData({
+			selectNo:index
+		});
+	},
+	submit(){
+		let n = this.data.selectNo,
+			price = this.data.pay[n].val;
+
+		console.log(price,this.userInfo)
 	}
 
 };

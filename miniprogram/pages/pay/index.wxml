@@ -1,1 +1,29 @@
-充值
+
+
+<view class="box_hcc my_title">
+    <image src="{{userIcon}}"></image>
+    <view class="my_title_name boxflex1 diandian">{{nickname}}</view>
+</view>
+
+
+<view class="my_title_row box_hlc">
+    <image src="../../images/my_title_icon.png"></image>
+    <view>选择充值金额</view>
+</view>
+
+<view class="pay_body box_hlt box_lines">
+    <block wx:for="{{pay}}" wx:key="id">
+        <view bindtap="select" class="pay_body_item box_hlc {{(index == selectNo)? 'select' : ''}}" data-index="{{index}}" data-data="{{item}}">
+            <image src="../../images/money.png"></image>
+            <view class="boxflex1">{{item.val}}元</view>
+            <image src="{{(index == selectNo)? '../../images/select_.png':'../../images/select.png' }}"></image>
+        </view>
+    </block>
+</view>
+
+<view class="button_top_jg"></view>
+<view class="box_hcc pay_choose canActive" bindtap="submit">
+    <image src="../../images/wechart_.png"></image>
+    <view>微信支付</view>
+</view>
+
