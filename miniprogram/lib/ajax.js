@@ -25,8 +25,9 @@ let ajax = {
 
                 rs = rs.data || {};
 
-                if(rs.err || rs.err ==0){
-                    error(rs.info);
+                if(rs.code<0){
+                    error(rs.msg);
+                    return;
                 }
 
                 success(rs);
