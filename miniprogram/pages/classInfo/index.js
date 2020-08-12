@@ -40,6 +40,7 @@ Page({
 			let param = await sys.getTabParam(),
 				typeName = param.name;
 			console.log(typeName)
+			await sys.setTabParam('');
 
 			this.scrollToType(typeName);
 		}
